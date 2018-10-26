@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (changes) - Contents</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap0"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap0.html">[MathJax off]</a></p>
+<p><a id="X7D2C85EC87DD46E5" name="X7D2C85EC87DD46E5"></a></p>
+<div class="pcenter">
+
+<h1>GAP - Changes from Earlier Versions</h1>
+
+<p>Release 4.dev, today</p>
+
+</div>
+<p><b>The GAP Group
+    
+    
+  </b>
+<br />Email: <span class="URL"><a href="mailto:support@gap-system.org">support@gap-system.org</a></span>
+<br />Homepage: <span class="URL"><a href="https://www.gap-system.org">https://www.gap-system.org</a></span>
+</p>
+
+<p><a id="X81488B807F2A1CF1" name="X81488B807F2A1CF1"></a></p>
+<h3>Copyright</h3>
+<p>Copyright © (1987-this year) for the core part of the <strong class="pkg">GAP</strong> system by the <strong class="pkg">GAP</strong> Group.</p>
+
+<p>Most parts of this distribution, including the core part of the <strong class="pkg">GAP</strong> system are distributed under the terms of the GNU General Public License, see <span class="URL"><a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></span> or the file <code class="file">GPL</code> in the <code class="file">etc</code> directory of the <strong class="pkg">GAP</strong> installation.</p>
+
+<p>More detailed information about copyright and licenses of parts of this distribution can be found in Section <a href="../../doc/ref/chap1_mj.html#X7950EFA183E3F666"><span class="RefLink">Reference: Copyright and License</span></a> of the <strong class="pkg">GAP</strong> reference manual.</p>
+
+<p><strong class="pkg">GAP</strong> is developed over a long time and has many authors and contributors. More detailed information can be found in Section <a href="../../doc/ref/chap1_mj.html#X877A62A1781C2147"><span class="RefLink">Reference: Authors and Maintainers</span></a> of the <strong class="pkg">GAP</strong> reference manual.</p>
+
+<p><a id="X8537FEB07AF2BEC8" name="X8537FEB07AF2BEC8"></a></p>
+
+<div class="contents">
+<h3>Contents<a id="contents" name="contents"></a></h3>
+
+<div class="ContChap"><a href="chap1_mj.html#X874E1D45845007FE">1 <span class="Heading">Preface</span></a>
+</div>
+<div class="ContChap"><a href="chap2_mj.html#X795B238486D0ABCD">2 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.9 and <strong class="pkg">GAP</strong> 4.10</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7AC99045788C39ED">2.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.10.0 (November 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D6E0C387D13B429">2.1-1 <span class="Heading">New features and major changes</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D7FE19B7F8235E5">2.1-2 <span class="Heading">Improved and extended functionality</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X82A7352D8641A11E">2.1-3 <span class="Heading">Changed documentation</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X842F3691816406D6">2.1-4 <span class="Heading">Fixed bugs that could lead to crashes</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D8629AE7B18F72B">2.1-5 <span class="Heading">Fixed bugs that could lead to incorrect results</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X86F4ECE78773DE72">2.1-6 <span class="Heading">Fixed bugs that could lead to break loops</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8470A7907B252827">2.1-7 <span class="Heading">Other fixed bugs</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E82CC3E7C54ACEC">2.1-8 <span class="Heading">Removed or obsolete functionality</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X844ECC8387ADC6D7">2.1-9 <span class="Heading">Packages</span></a>
+</span>
+</div></div>
+</div>
+<div class="ContChap"><a href="chap3_mj.html#X7DE3F944789F9676">3 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.8 and <strong class="pkg">GAP</strong> 4.9</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7E74F2127F858880">3.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.1 (May 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X87E35B7B7D7B2AF6">3.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7F52B77B7DBACC17">3.1-2 <span class="Heading"><strong class="pkg">HPC-GAP</strong></span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X875343D47A7B5E62">3.1-3 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.10</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X788623D37D59433D">3.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.2 (July 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X80F675A48712F934">3.2-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9.2</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X85F5CB9C80D89E10">3.2-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.9.1</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7DCF1B2984AEB7F0">3.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.3 (September 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X878606AD8708A3AF">3.3-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9.3</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7C655E8782735518">3.3-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.9.2</span></a>
+</span>
+</div></div>
+</div>
+<div class="ContChap"><a href="chap4_mj.html#X78E4871E83067AB2">4 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.7 and <strong class="pkg">GAP</strong> 4.8</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X79FD32317A501139">4.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.2 (February 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X809328727BE7E536">4.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X82C1E2C67F40F08E">4.1-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.7.8</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7A20BE707ADF7026">4.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.3 (March 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X879A200E81946C6F">4.2-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.3</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7B972D037B89F4F7">4.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.4 (June 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7E7C695481D3E9AF">4.3-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.4</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7878A4097FDB663D">4.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.5 (September 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X790C1A5D81C9B334">4.4-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.5</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X82FEFE5A7B7EF603">4.5 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.6 (November 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X809C8F4681E75C99">4.5-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.6</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7D60AECE7957C682">4.6 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.7 (March 2017)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X87ECFC4F81FD0602">4.6-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.7</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7C0FA46587A3CEFB">4.6-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.6</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X822D0A3E85F800B3">4.7 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.8 (August 2017)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7EE70D9681685719">4.7-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.8</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B7FD76C7D5787DF">4.7-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.7</span></a>
+</span>
+</div></div>
+</div>
+<div class="ContChap"><a href="chap5_mj.html#X7C361B5F862188D4">5 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.6 and <strong class="pkg">GAP</strong> 4.7</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X81CB2A15826D4AFB">5.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.2 (December 2013)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5_mj.html#X7998D9AB780EC4DE">5.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.7</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5_mj.html#X8536D3AE87C31A56">5.1-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.6.5</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X80EA4AA07A9A4A4D">5.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.3 (February 2014)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X795A5A517CDC5C91">5.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.4 (February 2014)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X80E231E67E972DB5">5.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.5 (May 2014)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X80763B757AC31C33">5.5 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.6 (November 2014)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X7F3DFFFF86F3B1F0">5.6 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.7 (February 2015)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5_mj.html#X80D11C6780BB54A2">5.7 <span class="Heading"><strong class="pkg">GAP</strong> 4.7.8 (June 2015)</span></a>
+</span>
+</div>
+</div>
+<div class="ContChap"><a href="chap6_mj.html#X809ACE9A7DB63A3B">6 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.5 and <strong class="pkg">GAP</strong> 4.6</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6_mj.html#X7AE9D2F086E11238">6.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.6.2 (February 2013)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6_mj.html#X7EE8AAA27E920B1E">6.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.6</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6_mj.html#X8262CB4279E9D374">6.1-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.5.4</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6_mj.html#X819FA4607D642A92">6.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.6.3 (March 2013)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6_mj.html#X7F304046877CF484">6.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.6.4 (April 2013)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6_mj.html#X811FB2407ED4AB5D">6.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.6.5 (July 2013)</span></a>
+</span>
+</div>
+</div>
+<div class="ContChap"><a href="chap7_mj.html#X84D336197CBC3777">7 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.4 and <strong class="pkg">GAP</strong> 4.5</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X87783FB985375B5F">7.1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.5</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X84FC44718386FA1A">7.1-1 <span class="Heading">Improved functionality</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X7E24E9DE7CADD1B7">7.1-2 <span class="Heading">Changes in distribution formats</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X80AB8641792E74C9">7.1-3 <span class="Heading">Improvements to the user interface</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X81318FC0873923C3">7.1-4 <span class="Heading">Better documentation</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X7CD19B647C39B3F7">7.2 <span class="Heading">Packages in <strong class="pkg">GAP</strong> 4.5</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X7E8089C881AB6BA1">7.2-1 <span class="Heading">Interface between the core system and packages</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X7D1ECE3D8403AC6F">7.2-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.4.12</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X7DB3678580B402F1">7.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.5.5 (July 2012)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X85A84FF97CCEAA08">7.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.5.6 (September 2012)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X78C0EBF8860AF110">7.5 <span class="Heading"><strong class="pkg">GAP</strong> 4.5.7 (December 2012)</span></a>
+</span>
+</div>
+</div>
+<div class="ContChap"><a href="chap8_mj.html#X84747575872E4F81">8 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.3 and <strong class="pkg">GAP</strong> 4.4</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X80084CB083AB949F">8.1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.4</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8_mj.html#X7C5AC61F824086D6">8.1-1 <span class="Heading">Potentially Incompatible Changes</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8_mj.html#X7D9702E3815BE9FB">8.1-2 <span class="Heading">New Packages</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8_mj.html#X7DA8709A850E772D">8.1-3 <span class="Heading">Performance Enhancements</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8_mj.html#X83E1A0D87D3D1EAF">8.1-4 <span class="Heading">New Programming and User Features</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X814A860E7B203FCF">8.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Bugfix 2 (April 2004)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X7C4492557E1EA74C">8.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Bugfix 3 (May 2004)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X78844C2C83310762">8.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Bugfix 4 (December 2004)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X7E6E6B7A7F6616CC">8.5 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 5 (May 2005)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X784D15477A825A78">8.6 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 6 (September 2005)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X786A20E17B11DAFD">8.7 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 7 (March 2006)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X83D5AF3679B8F685">8.8 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 8 (September 2006)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X7E9F0AB1807D6B64">8.9 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 9 (November 2006)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X8499C5CA7CD76125">8.10 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 10 (October 2007)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X86F8AE877C7699E1">8.11 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 11 (December 2008)</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap8_mj.html#X87EF7820794F3C59">8.12 <span class="Heading"><strong class="pkg">GAP</strong> 4.4 Update 12 (December 2008)</span></a>
+</span>
+</div>
+</div>
+<div class="ContChap"><a href="chap9_mj.html#X7F5DE9997CF43125">9 <span class="Heading">Changes from Earlier Versions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap9_mj.html#X8205C966783E6F37">9.1 <span class="Heading">Earlier Changes</span></a>
+</span>
+</div>
+</div>
+<div class="ContChap"><a href="chapInd_mj.html"><span class="Heading">Index</span></a></div>
+<br />
+</div>
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (changes) - Chapter 4: Changes between GAP 4.7 and GAP 4.8</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap4"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap4_mj.html">[MathJax on]</a></p>
+<p><a id="X78E4871E83067AB2" name="X78E4871E83067AB2"></a></p>
+<div class="ChapSects"><a href="chap4.html#X78E4871E83067AB2">4 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.7 and <strong class="pkg">GAP</strong> 4.8</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X79FD32317A501139">4.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.2 (February 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X809328727BE7E536">4.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X82C1E2C67F40F08E">4.1-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.7.8</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7A20BE707ADF7026">4.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.3 (March 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X879A200E81946C6F">4.2-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.3</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7B972D037B89F4F7">4.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.4 (June 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7E7C695481D3E9AF">4.3-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.4</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7878A4097FDB663D">4.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.5 (September 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X790C1A5D81C9B334">4.4-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.5</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X82FEFE5A7B7EF603">4.5 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.6 (November 2016)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X809C8F4681E75C99">4.5-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.6</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7D60AECE7957C682">4.6 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.7 (March 2017)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X87ECFC4F81FD0602">4.6-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.7</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7C0FA46587A3CEFB">4.6-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.6</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X822D0A3E85F800B3">4.7 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.8 (August 2017)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7EE70D9681685719">4.7-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.8</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7B7FD76C7D5787DF">4.7-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.7</span></a>
+</span>
+</div></div>
+</div>
+
+<h3>4 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.7 and <strong class="pkg">GAP</strong> 4.8</span></h3>
+
+<p>This chapter contains an overview of the most important changes introduced in <strong class="pkg">GAP</strong> 4.8.2 release (the 1st public release of <strong class="pkg">GAP</strong> 4.8). Later it will also contain information about subsequent update releases for <strong class="pkg">GAP</strong> 4.8. First of all, the <strong class="pkg">GAP</strong> development repository is now hosted on GitHub at <span class="URL"><a href="https://github.com/gap-system/gap">https://github.com/gap-system/gap</a></span>, and <strong class="pkg">GAP</strong> 4.8 is the first major <strong class="pkg">GAP</strong> release made from this repository. The public issue tracker for the core <strong class="pkg">GAP</strong> system is located at <span class="URL"><a href="https://github.com/gap-system/gap/issues">https://github.com/gap-system/gap/issues</a></span>, and you may use appropriate milestones from <span class="URL"><a href="https://github.com/gap-system/gap/milestones">https://github.com/gap-system/gap/milestones</a></span> to see all changes that were introduced in corresponding <strong class="pkg">GAP</strong> releases. An overview of the most significant ones is provided below.</p>
+
+<p><a id="X79FD32317A501139" name="X79FD32317A501139"></a></p>
+
+<h4>4.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.2 (February 2016)</span></h4>
+
+<p><a id="X809328727BE7E536" name="X809328727BE7E536"></a></p>
+
+<h5>4.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8</span></h5>
+
+<p>New features:</p>
+
+
+<ul>
+<li><p>Added support for profiling which tracks how much time in spent on each line of <strong class="pkg">GAP</strong> code. This can be used to show where code is spending a long time and also check which lines of code are even executed. See the documentation for <code class="func">ProfileLineByLine</code> (<a href="../../doc/ref/chap7_mj.html#X86557887796F66FA"><span class="RefLink">Reference: ProfileLineByLine</span></a>) and <code class="func">CoverageLineByLine</code> (<a href="../../doc/ref/chap7_mj.html#X87CC48807DB4C008"><span class="RefLink">Reference: CoverageLineByLine</span></a>) for details on generating profiles, and the <strong class="pkg">Profiling</strong> package for transforming these profiles into a human-readable form.</p>
+
+</li>
+<li><p>Added ability to install (in the library or packages) methods for accessing lists using multiple indices and indexing into lists using indices other than positive small integers. Such methods could allow, for example, to support expressions like</p>
+
+
+<div class="example"><pre>
+m[1,2];
+m[1,2,3] := x;
+IsBound(m["a","b",Z(7)]);
+Unbind(m[1][2,3])
+</pre></div>
+
+</li>
+<li><p>Added support for partially variadic functions to allow function expressions like</p>
+
+
+<div class="example"><pre>
+function( a, b, c, x... ) ... end;
+</pre></div>
+
+<p>which would require at least three arguments and assign the first three to <var class="Arg">a</var>, <var class="Arg">b</var> and <var class="Arg">c</var> and then a list containing any remaining ones to <var class="Arg">x</var>.</p>
+
+<p>The former special meaning of the argument <var class="Arg">arg</var> is still supported and is now equivalent to <code class="code">function( arg... )</code>, so no changes in the existing code are required.</p>
+
+</li>
+<li><p>Introduced <code class="code">CallWithTimeout</code> and <code class="code">CallWithTimeoutList</code> to call a function with a limit on the CPU time it can consume. This functionality may not be available on all systems and you should check <code class="code">GAPInfo.TimeoutsSupported</code> before using this functionality. (These functions were withdrawn in <strong class="pkg">GAP</strong> 4.9.)</p>
+
+</li>
+<li><p><strong class="pkg">GAP</strong> now displays the filename and line numbers of statements in backtraces when entering the break loop.</p>
+
+</li>
+<li><p>Introduced <code class="func">TestDirectory</code> (<a href="../../doc/ref/chap7_mj.html#X87AF67528799481F"><span class="RefLink">Reference: TestDirectory</span></a>) function to find (recursively) all <code class="file">.tst</code> files from a given directory or a list of directories and run them using <code class="func">Test</code> (<a href="../../doc/ref/chap7_mj.html#X87712F9D8732193C"><span class="RefLink">Reference: Test</span></a>).</p>
+
+</li>
+</ul>
+<p>Improved and extended functionality:</p>
+
+
+<ul>
+<li><p>Method tracing shows the filename and line of function during tracing.</p>
+
+</li>
+<li><p><code class="func">TraceAllMethods</code> (<a href="../../doc/ref/chap7_mj.html#X7D34CADB813A4AF1"><span class="RefLink">Reference: TraceAllMethods</span></a>) and <code class="func">UntraceAllMethods</code> (<a href="../../doc/ref/chap7_mj.html#X7B3018AA82D55949"><span class="RefLink">Reference: UntraceAllMethods</span></a>) to turn on and off tracing all methods in <strong class="pkg">GAP</strong>. Also, for the uniform approach <code class="func">UntraceImmediateMethods</code> (<a href="../../doc/ref/chap7_mj.html#X81078D3387A38E31"><span class="RefLink">Reference: UntraceImmediateMethods</span></a>) has been added as an equivalent of <code class="code">TraceImmediateMethods(false)</code>.</p>
+
+</li>
+<li><p>The most common cases of <code class="func">AddDictionary</code> (<a href="../../doc/ref/chap28_mj.html#X86C4F0507AD98B8A"><span class="RefLink">Reference: AddDictionary</span></a>) on three arguments now bypass method selection, avoiding the cost of determining homogeneity for plain lists of mutable objects.</p>
+
+</li>
+<li><p>Improved methods for symmetric and alternating groups in the "natural" representations and removed some duplicated code.</p>
+
+</li>
+<li><p>Package authors may optionally specify the source code repository, issue tracker and support email address for their package using new components in the <code class="file">PackageInfo.g</code> file, which will be used to create hyperlinks from the package overview page (see <code class="file">PackageInfo.g</code> from the Example package which you may use as a template).</p>
+
+</li>
+</ul>
+<p>Changed functionality:</p>
+
+
+<ul>
+<li><p>As a preparation for the future developments to support multithreading, some language extensions from the <strong class="pkg">HPC-GAP</strong> project were backported to the <strong class="pkg">GAP</strong> library to help to unify the codebase of both <strong class="pkg">GAP</strong> 4 and <strong class="pkg">HPC-GAP</strong>. The only change which is not backwards compatible is that <code class="code">atomic</code>, <code class="code">readonly</code> and <code class="code">readwrite</code> are now keywords, and thus are no longer valid identifiers. So if you have any variables or functions using that name, you will have to change it in <strong class="pkg">GAP</strong> 4.8.</p>
+
+</li>
+<li><p>There was inconsistent use of the following properties of semigroups: <code class="code">IsGroupAsSemigroup</code>, <code class="code">IsMonoidAsSemigroup</code>, and <code class="code">IsSemilatticeAsSemigroup</code>. <code class="code">IsGroupAsSemigroup</code> was true for semigroups that mathematically defined a group, and for semigroups in the category <code class="func">IsGroup</code> (<a href="../../doc/ref/chap39_mj.html#X7939B3177BBD61E4"><span class="RefLink">Reference: IsGroup</span></a>); <code class="code">IsMonoidAsSemigroup</code> was only true for semigroups that mathematically defined monoids, but did not belong to the category <code class="func">IsMonoid</code> (<a href="../../doc/ref/chap51_mj.html#X861C523483C6248C"><span class="RefLink">Reference: IsMonoid</span></a>); and <code class="code">IsSemilatticeAsSemigroup</code> was simply a property of semigroups, as there is no category <code class="code">IsSemilattice</code>.</p>
+
+<p>From version 4.8 onwards, <code class="code">IsSemilatticeAsSemigroup</code> is renamed to <code class="code">IsSemilattice</code>, and <code class="code">IsMonoidAsSemigroup</code> returns true for semigroups in the category <code class="func">IsMonoid</code> (<a href="../../doc/ref/chap51_mj.html#X861C523483C6248C"><span class="RefLink">Reference: IsMonoid</span></a>).</p>
+
+<p>This way all of the properties of the type <code class="code">IsXAsSemigroup</code> are consistent. It should be noted that the only methods installed for <code class="code">IsMonoidAsSemigroup</code> belong to the <strong class="pkg">Semigroups</strong> and <strong class="pkg">Smallsemi</strong> packages.</p>
+
+</li>
+<li><p><code class="code">ReadTest</code> became obsolete and for backwards compatibility is replaced by <code class="func">Test</code> (<a href="../../doc/ref/chap7_mj.html#X87712F9D8732193C"><span class="RefLink">Reference: Test</span></a>) with the option to compare the output up to whitespaces.</p>
+
+</li>
+<li><p>The function `ErrorMayQuit`, which differs from <code class="func">Error</code> (<a href="../../doc/ref/chap6_mj.html#X7E7AD8D87EBA1A08"><span class="RefLink">Reference: Error</span></a>) by not allowing execution to continue, has been renamed to <code class="func">ErrorNoReturn</code> (<a href="../../doc/ref/chap6_mj.html#X7A5C000D7E4984DD"><span class="RefLink">Reference: ErrorNoReturn</span></a>).</p>
+
+</li>
+</ul>
+<p>Fixed bugs:</p>
+
+
+<ul>
+<li><p>A combination of two bugs could lead to a segfault. First off, <code class="func">NullMat</code> (<a href="../../doc/ref/chap24_mj.html#X86D343A77D9B3D4D"><span class="RefLink">Reference: NullMat</span></a>) (and various other <strong class="pkg">GAP</strong> functions), when asked to produce matrix over a small field, called <code class="func">ConvertToMatrixRep</code> (<a href="../../doc/ref/chap24_mj.html#X8587A62F818AA0D6"><span class="RefLink">Reference: ConvertToMatrixRep for a list (and a field)</span></a>). After this, if the user tried to change one of the entries to a value from a larger extension field, this resulted in an error. (This is now fixed).</p>
+
+<p>Unfortunately, the C code catching this error had a bug and allowed users to type "return" to continue while ignoring the conversion error. This was a bad idea, as the C code would be in an inconsistent state at this point, subsequently leading to a crash.</p>
+
+<p>This, too, has been fixed, by not allowing the user to ignore the error by entering "return".</p>
+
+</li>
+<li><p>The Fitting-free code and code inheriting PCGS is now using <code class="func">IndicesEANormalSteps</code> (<a href="../../doc/ref/chap45_mj.html#X7BCC1E2A80544CC7"><span class="RefLink">Reference: IndicesEANormalSteps</span></a>) instead of <code class="func">IndicesNormalSteps</code> (<a href="../../doc/ref/chap45_mj.html#X7A954E3887189842"><span class="RefLink">Reference: IndicesNormalSteps</span></a>), as these indices are neither guaranteed, nor required to be maximally refined when restricting to subgroups.</p>
+
+</li>
+<li><p>A bug that caused a break loop in the computation of the Hall subgroup for groups having a trivial Fitting subgroup.</p>
+
+</li>
+<li><p>Including a <code class="code">break</code> or <code class="code">continue</code> statement in a function body but not in a loop now gives a syntax error instead of failing at run time.</p>
+
+</li>
+<li><p><code class="func">GroupGeneralMappingByImages</code> (<a href="../../doc/ref/chap40_mj.html#X7A59F2C47BD41DC8"><span class="RefLink">Reference: GroupGeneralMappingByImages</span></a>) now verifies that that image of a mapping is contained in its range.</p>
+
+</li>
+<li><p>Fixed a bug in caching the degree of transformation that could lead to a non-identity transformation accidentally changing its value to the identity transformation.</p>
+
+</li>
+<li><p>Fixed the problem with using Windows default browser as a help viewer using <code class="code">SetHelpViewer("browser");</code>.</p>
+
+</li>
+</ul>
+<p><a id="X82C1E2C67F40F08E" name="X82C1E2C67F40F08E"></a></p>
+
+<h5>4.1-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.7.8</span></h5>
+
+<p>At the time of the release of <strong class="pkg">GAP</strong> 4.7.8 there were 119 packages redistributed with <strong class="pkg">GAP</strong>. New packages that have been added to the redistribution since the release of <strong class="pkg">GAP</strong> 4.7.8 are:</p>
+
+
+<ul>
+<li><p><strong class="pkg">CAP</strong> (Categories, Algorithms, Programming) package by Sebastian Gutsche, Sebastian Posur and Øystein Skartsæterhagen, together with three associated packages <strong class="pkg">GeneralizedMorphismsForCAP</strong>, <strong class="pkg">LinearAlgebraForCAP</strong> and <strong class="pkg">ModulePresentationsForCAP</strong> (all three - by Sebastian Gutsche and Sebastian Posur).</p>
+
+</li>
+<li><p><strong class="pkg">Digraphs</strong> package by Jan De Beule, Julius Jonušas, James Mitchell, Michael Torpey and Wilf Wilson, which provides functionality to work with graphs, digraphs, and multidigraphs.</p>
+
+</li>
+<li><p><strong class="pkg">FinInG</strong> package by John Bamberg, Anton Betten, Philippe Cara, Jan De Beule, Michel Lavrauw and Max Neunhöffer for computation in Finite Incidence Geometry.</p>
+
+</li>
+<li><p><strong class="pkg">HeLP</strong> package by Andreas Bächle and Leo Margolis, which computes constraints on partial augmentations of torsion units in integral group rings using a method developed by Luthar, Passi and Hertweck. The package can be employed to verify the Zassenhaus Conjecture and the Prime Graph Question for finite groups, once their characters are known. It uses an interface to the software package <strong class="pkg">4ti2</strong> to solve integral linear inequalities.</p>
+
+</li>
+<li><p><strong class="pkg">matgrp</strong> package by Alexander Hulpke, which provides an interface to the solvable radical functionality for matrix groups, building on constructive recognition.</p>
+
+</li>
+<li><p><strong class="pkg">NormalizInterface</strong> package by Sebastian Gutsche, Max Horn and Christof Söger, which provides a GAP interface to <strong class="pkg">Normaliz</strong>, enabling direct access to the complete functionality of <strong class="pkg">Normaliz</strong>, such as computations in affine monoids, vector configurations, lattice polytopes, and rational cones.</p>
+
+</li>
+<li><p><strong class="pkg">profiling</strong> package by Christopher Jefferson for transforming profiles produced by <code class="func">ProfileLineByLine</code> (<a href="../../doc/ref/chap7_mj.html#X86557887796F66FA"><span class="RefLink">Reference: ProfileLineByLine</span></a>) and <code class="func">CoverageLineByLine</code> (<a href="../../doc/ref/chap7_mj.html#X87CC48807DB4C008"><span class="RefLink">Reference: CoverageLineByLine</span></a>) into a human-readable form.</p>
+
+</li>
+<li><p><strong class="pkg">Utils</strong> package by Sebastian Gutsche, Stefan Kohl and Christopher Wensley, which provides a collection of utility functions gleaned from many packages.</p>
+
+</li>
+<li><p><strong class="pkg">XModAlg</strong> package by Zekeriya Arvasi and Alper Odabas, which provides a collection of functions for computing with crossed modules and Cat1-algebras and morphisms of these structures.</p>
+
+</li>
+</ul>
+<p><a id="X7A20BE707ADF7026" name="X7A20BE707ADF7026"></a></p>
+
+<h4>4.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.3 (March 2016)</span></h4>
+
+<p><a id="X879A200E81946C6F" name="X879A200E81946C6F"></a></p>
+
+<h5>4.2-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.3</span></h5>
+
+<p>New features:</p>
+
+
+<ul>
+<li><p>New function <code class="func">TestPackage</code> (<a href="../../doc/ref/chap76_mj.html#X866ADD4E814A54F0"><span class="RefLink">Reference: TestPackage</span></a>) to run standard tests (if available) for a single package in the current <strong class="pkg">GAP</strong> session (also callable via <code class="code">make testpackage PKGNAME=pkgname</code> to run package tests in the same settings that are used for testing <strong class="pkg">GAP</strong> releases).</p>
+
+</li>
+</ul>
+<p>Improved and extended functionality:</p>
+
+
+<ul>
+<li><p><code class="func">TestDirectory</code> (<a href="../../doc/ref/chap7_mj.html#X87AF67528799481F"><span class="RefLink">Reference: TestDirectory</span></a>) now prints a special status message to indicate the outcome of the test (this is convenient for automated testing). If necessary, this message may be suppressed by using the option <code class="code">suppressStatusMessage</code></p>
+
+</li>
+<li><p>Improved output of tracing methods (which may be invoked, for example, with <code class="func">TraceAllMethods</code> (<a href="../../doc/ref/chap7_mj.html#X7D34CADB813A4AF1"><span class="RefLink">Reference: TraceAllMethods</span></a>)) by displaying filename and line number in some more cases.</p>
+
+</li>
+</ul>
+<p>Changed functionality:</p>
+
+
+<ul>
+<li><p>Fixed some inconsistencies in the usage of <code class="func">IsGeneratorsOfSemigroup</code> (<a href="../../doc/ref/chap51_mj.html#X79776D7C8399F2CF"><span class="RefLink">Reference: IsGeneratorsOfSemigroup</span></a>).</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to incorrect results:</p>
+
+
+<ul>
+<li><p>Fallback methods for conjugacy classes, that were never intended for infinite groups, now use <code class="func">IsFinite</code> (<a href="../../doc/ref/chap30_mj.html#X808A4061809A6E67"><span class="RefLink">Reference: IsFinite</span></a>) filter to prevent them being called for infinite groups. [Reported by Gabor Horvath]</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p>Calculating stabiliser for the alternating group caused a break loop in the case when it defers to the corresponding symmetric group.</p>
+
+</li>
+<li><p>It was not possible to use <code class="func">DotFileLatticeSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X7E5DF287825EE7BA"><span class="RefLink">Reference: DotFileLatticeSubgroups</span></a>) for a trivial group. [Reported by Sergio Siccha]</p>
+
+</li>
+<li><p>A break loop while computing <code class="func">AutomorphismGroup</code> (<a href="../../doc/ref/chap40_mj.html#X87677B0787B4461A"><span class="RefLink">Reference: AutomorphismGroup</span></a>) for <code class="code">TransitiveGroup(12,269)</code>. [Reported by Ignat Soroko]</p>
+
+</li>
+<li><p>A break loop while computing conjugacy classes of <code class="code">PSL(6,4)</code>. [Reported by Martin Macaj]</p>
+
+</li>
+</ul>
+<p>Other fixed bugs:</p>
+
+
+<ul>
+<li><p>Fix for using Firefox as a default help viewer with <code class="func">SetHelpViewer</code> (<a href="../../doc/ref/chap2_mj.html#X87C1BFB2826488B0"><span class="RefLink">Reference: SetHelpViewer</span></a>). [Reported by Tom McDonough]</p>
+
+</li>
+</ul>
+<p><a id="X7B972D037B89F4F7" name="X7B972D037B89F4F7"></a></p>
+
+<h4>4.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.4 (June 2016)</span></h4>
+
+<p><a id="X7E7C695481D3E9AF" name="X7E7C695481D3E9AF"></a></p>
+
+<h5>4.3-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.4</span></h5>
+
+<p>New features:</p>
+
+
+<ul>
+<li><p>The <strong class="pkg">GAP</strong> distribution now includes <code class="file">bin/BuildPackages.sh</code>, a script which can be started from the <code class="file">pkg</code> directory via <code class="code">../bin/BuildPackages.sh</code> and will attempt to build as many packages as possible. It replaces the <code class="file">InstPackages.sh</code> script which was not a part of the <strong class="pkg">GAP</strong> distribution and had to be downloaded separately from the <strong class="pkg">GAP</strong> website. The new script is more robust and simplifies adding new packages with binaries, as it requires no adjustments if the new package supports the standard <code class="code">./configure; make</code> build procedure.</p>
+
+</li>
+</ul>
+<p>Improved and extended functionality:</p>
+
+
+<ul>
+<li><p><code class="func">SimpleGroup</code> (<a href="../../doc/ref/chap39_mj.html#X8492B05B822AC58C"><span class="RefLink">Reference: SimpleGroup</span></a>) now produces more informative error message in the case when <code class="func">AtlasGroup</code> (<a href="../../pkg/atlasrep/doc/chap3.html#X80AABEE783363B70"><span class="RefLink">AtlasRep: AtlasGroup</span></a>) could not load the requested group.</p>
+
+</li>
+<li><p>An info message with the suggestion to use <code class="func">InfoPackageLoading</code> (<a href="../../doc/ref/chap76_mj.html#X7D162DDF813D2BBA"><span class="RefLink">Reference: InfoPackageLoading</span></a>) will now be displayed when <code class="func">LoadPackage</code> (<a href="../../doc/ref/chap76_mj.html#X79B373A77B29D1F5"><span class="RefLink">Reference: LoadPackage</span></a>) returns <code class="keyw">fail</code> (unless <strong class="pkg">GAP</strong> is started with <code class="code">-b</code> option).</p>
+
+</li>
+<li><p>The build system will now enable C++ support in GMP only if a working C++ compiler is detected.</p>
+
+</li>
+<li><p>More checks were added when embedding coefficient rings or rational numbers into polynomial rings in order to forbid adding polynomials in different characteristic.</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to crashes:</p>
+
+
+<ul>
+<li><p>Fixed the crash in <code class="code">--cover</code> mode when reading files with more than 65,536 lines.</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to incorrect results:</p>
+
+
+<ul>
+<li><p>Fixed an error in the code for partial permutations that occurred on big-endian systems. [Reported by Bill Allombert]</p>
+
+</li>
+<li><p>Fixed the kernel method for <code class="func">Remove</code> (<a href="../../doc/ref/chap21_mj.html#X7E98B11B79BA9167"><span class="RefLink">Reference: Remove</span></a>) with one argument, which failed to reduce the length of a list to the position of the last bound entry. [Reported by Peter Schauenburg]</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p>Fixed the break loop while using <code class="func">Factorization</code> (<a href="../../doc/ref/chap39_mj.html#X7E19F92284F6684E"><span class="RefLink">Reference: factorization</span></a>) on permutation groups by removing some old code that relied on further caching in <code class="code">Factorization</code>. [Reported by Grahame Erskine]</p>
+
+</li>
+<li><p>Fixed a problem with computation of maximal subgroups in an almost simple group. [Reported by Ramon Esteban Romero]</p>
+
+</li>
+<li><p>Added missing methods for <code class="func">Intersection2</code> (<a href="../../doc/ref/chap30_mj.html#X851069107CACF98E"><span class="RefLink">Reference: Intersection2</span></a>) when one of the arguments is an empty list. [Reported by Wilf Wilson]</p>
+
+</li>
+</ul>
+<p>Other fixed bugs:</p>
+
+
+<ul>
+<li><p>Fixed several bugs in <code class="func">RandomPrimitivePolynomial</code> (<a href="../../doc/ref/chap59_mj.html#X7ECC593583E68A6C"><span class="RefLink">Reference: RandomPrimitivePolynomial</span></a>). [Reported by Nusa Zidaric]</p>
+
+</li>
+<li><p>Fixed several problems with <code class="func">Random</code> (<a href="../../doc/ref/chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">Reference: Random</span></a>) on long lists in 64-bit GAP installations.</p>
+
+</li>
+</ul>
+<p><a id="X7878A4097FDB663D" name="X7878A4097FDB663D"></a></p>
+
+<h4>4.4 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.5 (September 2016)</span></h4>
+
+<p><a id="X790C1A5D81C9B334" name="X790C1A5D81C9B334"></a></p>
+
+<h5>4.4-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.5</span></h5>
+
+<p>Improved and extended functionality:</p>
+
+
+<ul>
+<li><p>The error messages produced when an unexpected <code class="keyw">fail</code> is returned were made more clear by explicitly telling that the result should not be boolean or <code class="keyw">fail</code> (before it only said "not a boolean").</p>
+
+</li>
+<li><p>For consistency, both <code class="func">NrTransitiveGroups</code> (<a href="../../pkg/transgrp/htm/CHAP001.htm#SECT001"><span class="RefLink">transgrp: NrTransitiveGroups</span></a>) and <code class="func">TransitiveGroup</code> (<a href="../../pkg/transgrp/htm/CHAP001.htm#SECT001"><span class="RefLink">transgrp: TransitiveGroup</span></a>) now disallow the transitive group of degree 1.</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to incorrect results:</p>
+
+
+<ul>
+<li><p>A bug in the code for algebraic field extensions over non-prime fields that may cause, for example, a list of all elements of the extension not being a duplicate-free. [Reported by Huta Gana]</p>
+
+</li>
+<li><p>So far, <code class="func">FileString</code> (<a href="../../pkg/GAPDoc-1.6.1/doc/chap6_mj.html#X7E14D32181FBC3C3"><span class="RefLink">GAPDoc: FileString</span></a>) only wrote files of sizes less than 2G and did not indicate an error in case of larger strings. Now strings of any length can be written, and in the case of a failure the corresponding system error is shown.</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p><code class="func">NaturalHomomorphismByIdeal</code> (<a href="../../doc/ref/chap56_mj.html#X83D53D98809EC461"><span class="RefLink">Reference: NaturalHomomorphismByIdeal</span></a>) was not reducing monomials before forming a quotient ring, causing a break loop on some inputs. [Reported by Dmytro Savchuk]</p>
+
+</li>
+<li><p>A bug in <code class="func">DefaultInfoHandler</code> (<a href="../../doc/ref/chap7_mj.html#X877BD99A82CB2643"><span class="RefLink">Reference: DefaultInfoHandler</span></a>) caused a break loop on startup with the setting <code class="code">SetUserPreference( "InfoPackageLoadingLevel", 4 )</code>`. [Reported by Mathieu Dutour]</p>
+
+</li>
+<li><p>The <code class="func">Iterator</code> (<a href="../../doc/ref/chap30_mj.html#X83ADF8287ED0668E"><span class="RefLink">Reference: Iterator</span></a>) for permutation groups was broken when the <code class="func">StabChainMutable</code> (<a href="../../doc/ref/chap43_mj.html#X80B5CF78829495C2"><span class="RefLink">Reference: StabChainMutable for a group</span></a>) of the group was not reduced, which can reasonably happen as the result of various algorithms.</p>
+
+</li>
+</ul>
+<p><a id="X82FEFE5A7B7EF603" name="X82FEFE5A7B7EF603"></a></p>
+
+<h4>4.5 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.6 (November 2016)</span></h4>
+
+<p><a id="X809C8F4681E75C99" name="X809C8F4681E75C99"></a></p>
+
+<h5>4.5-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.6</span></h5>
+
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p>Fixed regression in the <strong class="pkg">GAP</strong> kernel code introduced in <strong class="pkg">GAP</strong> 4.8.5 and breaking <code class="func">StringFile</code> (<a href="../../pkg/GAPDoc-1.6.1/doc/chap6_mj.html#X7E14D32181FBC3C3"><span class="RefLink">GAPDoc: StringFile</span></a>) ability to work with compressed files. [Reported by Bill Allombert]</p>
+
+</li>
+</ul>
+<p><a id="X7D60AECE7957C682" name="X7D60AECE7957C682"></a></p>
+
+<h4>4.6 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.7 (March 2017)</span></h4>
+
+<p><a id="X87ECFC4F81FD0602" name="X87ECFC4F81FD0602"></a></p>
+
+<h5>4.6-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.7</span></h5>
+
+<p>Fixed bugs that could lead to incorrect results:</p>
+
+
+<ul>
+<li><p>Fixed a regression from <strong class="pkg">GAP</strong> 4.7.6 when reading compressed files after a workspace is loaded. Before the fix, if <strong class="pkg">GAP</strong> is started with the <code class="code">-L</code> option (load workspace), using <code class="func">ReadLine</code> (<a href="../../doc/ref/chap10_mj.html#X7D2CA44C7D110C4F"><span class="RefLink">Reference: ReadLine</span></a>) on the input stream for a compressed file returned by <code class="func">InputTextFile</code> (<a href="../../doc/ref/chap10_mj.html#X8343D04981128784"><span class="RefLink">Reference: InputTextFile</span></a>) only returned the first character. [Reported by Bill Allombert]</p>
+
+</li>
+</ul>
+<p>Other fixed bugs:</p>
+
+
+<ul>
+<li><p>Fixed compiler warning occurring when <strong class="pkg">GAP</strong> is compiled with gcc 6.2.0. [Reported by Bill Allombert]</p>
+
+</li>
+</ul>
+<p><a id="X7C0FA46587A3CEFB" name="X7C0FA46587A3CEFB"></a></p>
+
+<h5>4.6-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.6</span></h5>
+
+<p>This release contains updated versions of 19 packages from <strong class="pkg">GAP</strong> 4.8.6 distribution. Additionally, the following package has been added for the redistribution with <strong class="pkg">GAP</strong>:</p>
+
+
+<ul>
+<li><p><strong class="pkg">lpres</strong> package (author: René Hartung, maintainer: Laurent Bartholdi) to work with L-presented groups, namely groups given by a finite generating set and a possibly infinite set of relations given as iterates of finitely many seed relations by a finite set of endomorphisms. The package implements nilpotent quotient, Todd-Coxeter and Reidemeister-Schreier algorithms for such groups.</p>
+
+</li>
+</ul>
+<p><a id="X822D0A3E85F800B3" name="X822D0A3E85F800B3"></a></p>
+
+<h4>4.7 <span class="Heading"><strong class="pkg">GAP</strong> 4.8.8 (August 2017)</span></h4>
+
+<p><a id="X7EE70D9681685719" name="X7EE70D9681685719"></a></p>
+
+<h5>4.7-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.8.8</span></h5>
+
+<p>Fixed bugs that could lead to incorrect results:</p>
+
+
+<ul>
+<li><p>Fixed a bug in <code class="func">RepresentativeAction</code> (<a href="../../doc/ref/chap41_mj.html#X857DC7B085EB0539"><span class="RefLink">Reference: RepresentativeAction</span></a>) producing incorrect answers for both symmetric and alternating groups, with both <code class="func">OnTuples</code> (<a href="../../doc/ref/chap41_mj.html#X832CC5F87EEA4A7E"><span class="RefLink">Reference: OnTuples</span></a>) and <code class="func">OnSets</code> (<a href="../../doc/ref/chap41_mj.html#X85AA04347CD117F9"><span class="RefLink">Reference: OnSets</span></a>), by producing elements outside the group. [Reported by Mun See Chang]</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p>Fixed a bug in <code class="func">RepresentativeAction</code> (<a href="../../doc/ref/chap41_mj.html#X857DC7B085EB0539"><span class="RefLink">Reference: RepresentativeAction</span></a>) for <span class="SimpleMath">S_n</span> and <span class="SimpleMath">A_n</span> acting on non-standard domains.</p>
+
+</li>
+</ul>
+<p>Other fixed bugs:</p>
+
+
+<ul>
+<li><p>Fixed a problem with checking the path to a file when using the default browser as a help viewer on Windows. [Reported by Jack Saunders]</p>
+
+</li>
+</ul>
+<p><a id="X7B7FD76C7D5787DF" name="X7B7FD76C7D5787DF"></a></p>
+
+<h5>4.7-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.7</span></h5>
+
+<p>This release contains updated versions of 29 packages from <strong class="pkg">GAP</strong> 4.8.7 distribution. Additionally, the <strong class="pkg">Gpd</strong> package (author: Chris Wensley) has been renamed to <strong class="pkg">Groupoids</strong>.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (changes) - Chapter 2: Changes between GAP 4.9 and GAP 4.10</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2.html">[MathJax off]</a></p>
+<p><a id="X795B238486D0ABCD" name="X795B238486D0ABCD"></a></p>
+<div class="ChapSects"><a href="chap2_mj.html#X795B238486D0ABCD">2 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.9 and <strong class="pkg">GAP</strong> 4.10</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7AC99045788C39ED">2.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.10.0 (November 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D6E0C387D13B429">2.1-1 <span class="Heading">New features and major changes</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D7FE19B7F8235E5">2.1-2 <span class="Heading">Improved and extended functionality</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X82A7352D8641A11E">2.1-3 <span class="Heading">Changed documentation</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X842F3691816406D6">2.1-4 <span class="Heading">Fixed bugs that could lead to crashes</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D8629AE7B18F72B">2.1-5 <span class="Heading">Fixed bugs that could lead to incorrect results</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X86F4ECE78773DE72">2.1-6 <span class="Heading">Fixed bugs that could lead to break loops</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8470A7907B252827">2.1-7 <span class="Heading">Other fixed bugs</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E82CC3E7C54ACEC">2.1-8 <span class="Heading">Removed or obsolete functionality</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X844ECC8387ADC6D7">2.1-9 <span class="Heading">Packages</span></a>
+</span>
+</div></div>
+</div>
+
+<h3>2 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.9 and <strong class="pkg">GAP</strong> 4.10</span></h3>
+
+<p>This chapter contains an overview of the most important changes introduced in <strong class="pkg">GAP</strong> 4.10.0 release (the 1st public release of <strong class="pkg">GAP</strong> 4.10). Later it will also contain information about subsequent update releases for <strong class="pkg">GAP</strong> 4.10.</p>
+
+<p>These changes are also listed on the Wiki page <span class="URL"><a href="https://github.com/gap-system/GAP/wiki/gap-4.10-release-notes">https://github.com/gap-system/GAP/wiki/gap-4.10-release-notes</a></span>.</p>
+
+<p><a id="X7AC99045788C39ED" name="X7AC99045788C39ED"></a></p>
+
+<h4>2.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.10.0 (November 2018)</span></h4>
+
+<p><a id="X7D6E0C387D13B429" name="X7D6E0C387D13B429"></a></p>
+
+<h5>2.1-1 <span class="Heading">New features and major changes</span></h5>
+
+
+<dl>
+<dt><strong class="Mark">Reduce impact of immediate methods</strong></dt>
+<dd><p>GAP allows declaring so-called "immediate methods". The idea is that these are very simple and fast methods which are immediately called if information about an object becomes known, in order to perform some quick deduction. For example, if the size of a group is set, there might be immediate methods which update the filters <code class="code">IsFinite</code> and <code class="code">IsTrivial</code> of the group suitably.</p>
+
+<p>While this can be very elegant and useful in interactive GAP sessions, the overhead for running these immediate methods and applying their results can become a major factor in the runtime of complex computations that create thousands or millions of objects.</p>
+
+<p>To address this, various steps were taken:</p>
+
+
+<ul>
+<li><p>some immediate methods were turned into regular methods;</p>
+
+</li>
+<li><p>a special handlers for <code class="code">SetSize</code> was created that performs deductions which previously were taken care of by immediate methods;</p>
+
+</li>
+<li><p>some immediate methods were replaced by implications (set via <code class="code">InstallTrueMethod</code>), a mechanism that essentially adds zero overhead, unlike immediate methods;</p>
+
+</li>
+<li><p>various group constructors were modified to precompute and preset properties of freshly created group objects, to avoid triggering immediate methods for these.</p>
+
+</li>
+</ul>
+<p>As a result of these and other changes, consider the following example; with GAP 4.9, it takes about 130 seconds on one test system, while with GAP 4.10 it runs in about 22 seconds, i.e., more than six times faster.</p>
+
+
+<div class="example"><pre>
+G:=PcGroupCode( 741231213963541373679312045151639276850536621925972119311,11664);;
+IsomorphismGroups(G,PcGroupCode(CodePcGroup(G),Size(G)))&lt;&gt;fail;
+</pre></div>
+
+<p>Relevant pull requests and issues: <span class="URL"><a href="https://github.com/gap-system/gap/pull/2386">#2386</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2387">#2387</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2522">#2522</a></span>.</p>
+
+</dd>
+<dt><strong class="Mark">Change definition of <code class="code">IsPGroup</code> to <em>not</em> require finiteness</strong></dt>
+<dd><p>This is a small change in terms of amount of code changed, but we list it here as it has a potential (albeit rather unlikely) impact on the code written by <strong class="pkg">GAP</strong> users: In the past, the GAP manual entry for <code class="code">IsPGroup</code> defined p-groups as being finite groups, which differs from the most commonly used definition for p-groups. Note however that there was not actual implication installed from <code class="code">IsPGroup</code> to <code class="code">IsFinite</code>, so it always was possible to actually created infinite groups in the filter <code class="code">IsPGroup</code>. In GAP 4.10, we adjusted (in <span class="URL"><a href="https://github.com/gap-system/gap/pull/1545">#1545</a></span>) the documentation for <code class="code">IsPGroup</code> to the commonly accepted definition for p-groups. In addition, code in the GAP library and in packages using <code class="code">IsPGroup</code> was audited and (in a very few cases) adjusted to explicitly check <code class="code">IsFinite</code> (see e.g. <span class="URL"><a href="https://github.com/gap-system/gap/pull/2866">#2866</a></span>).</p>
+
+</dd>
+<dt><strong class="Mark">Experimental support for using the Julia garbage collector</strong></dt>
+<dd><p>It is now possible to use the garbage collector of the <span class="URL"><a href="https://julialang.org">Julia language</a></span> instead of GAP's traditional GASMAN garbage collector. This is partly motivated by a desire to allow tight integration with GAP and Julia in the future. Warning: right now, this is <em>slower</em>, and also requires a patched version of Julia.</p>
+
+<p>Relevant pull requests: <span class="URL"><a href="https://github.com/gap-system/gap/pull/2092">#2092</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2408">#2408</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2461">#2461</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2485">#2485</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2495">#2495</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2672">#2672</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2688">#2688</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2793">#2793</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2904">#2904</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2905">#2905</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2931">#2931</a></span>.</p>
+
+</dd>
+<dt><strong class="Mark">libGAP (WIP)</strong></dt>
+<dd><p>We now provide a semi-official way to allow 3rd party code to link GAP as a library; this is based on the <code class="code">libGAP</code> code by <span class="URL"><a href="https://www.sagemath.org">SageMath</a></span>, but different. We hope that a future version of SageMath can drop its custom modifications for GAP and use this interface instead. If you are interested in this kind of interface, please get in touch with us to help us improve it. See also <span class="URL"><a href="https://mail.gap-system.org/pipermail/gap/2018-August/001123.html">this email</a></span>.</p>
+
+<p>Relevant pull requests:</p>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/1690">#1690</a></span> Add a callback to <code class="code">FuncJUMP_TO_CATCH</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2528">#2528</a></span> Add <code class="code">IsLIBGAP</code> constant</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2702">#2702</a></span> Add GAP kernel API</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2723">#2723</a></span> Introduce command line options <code class="code">--norepl</code> and <code class="code">--nointeract</code></p>
+
+</li>
+</ul>
+</dd>
+</dl>
+<p><a id="X7D7FE19B7F8235E5" name="X7D7FE19B7F8235E5"></a></p>
+
+<h5>2.1-2 <span class="Heading">Improved and extended functionality</span></h5>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2041">#2041</a></span> Teach <code class="code">FrattiniSubgroup</code> methods to check for solvability</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2053">#2053</a></span> Faster computation of modular inverses of integers</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2057">#2057</a></span> Various changes, including:</p>
+
+
+<ul>
+<li><p>Improve computation of automorphism groups for fp groups (we still recommend to instead first convert the group to a computationally nice representation, such as a perm or pc group)</p>
+
+</li>
+<li><p>Add <code class="code">MinimalFaithfulPermutationDegree</code> attribute for finite groups</p>
+
+</li>
+<li><p>Improve performance of <code class="code">GQuotients(F,G)</code> when <code class="code">F</code> is an Fp group</p>
+
+</li>
+<li><p>Some other performance and documentation tweaks</p>
+
+</li>
+</ul>
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2061">#2061</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2086">#2086</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2159">#2159</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2306">#2306</a></span> Speed up <code class="code">GcdInt</code>, <code class="code">LcmInt</code>, <code class="code">PValuation</code>, <code class="code">RootInt</code>, <code class="code">SmallestRootInt</code>, <code class="code">IsPrimePowerInt</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2063">#2063</a></span> Teach GAP that BPSW pseudo primes less than 2^64 are all known to be prime (the previous limit was 10^13)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2091">#2091</a></span> Refactor <code class="code">DeclareAttribute</code> and <code class="code">NewAttribute</code> (arguments are now verified stricter)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2115">#2115</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2204">#2204</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2272">#2272</a></span> Allow (optionally) passing a random source to many more <code class="code">Random</code> methods than before, and also to <code class="code">RandomList</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2136">#2136</a></span> Add <code class="code">shortname</code> entry to record returned by <code class="code">IsomorphismTypeInfoFiniteSimpleGroup</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2181">#2181</a></span> Implement <code class="code">Union(X,Y)</code>, where <code class="code">X</code> and <code class="code">Y</code> are in <code class="code">PositiveIntegers, NonnegativeIntegers, Integers, GaussianIntegers, Rationals, GaussianRationals, Cyclotomics</code>, at least where a suitable output object exists (we already provided <code class="code">Intersection(X,Y)</code> for a long time)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2185">#2185</a></span> Implement <code class="code">IsCentral(M,x)</code>, where <code class="code">M</code> is a magma, monoid, group, ring, algebra, ... and <code class="code">x</code> an element of <code class="code">M</code> (the documentation already claimed that these exist for a long time)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2199">#2199</a></span> Optimize true/false conditions when coding if-statements</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2200">#2200</a></span> Add <code class="code">StringFormatted</code>, <code class="code">PrintFormatted</code>, <code class="code">PrintToFormatted</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2222">#2222</a></span> Turn hidden implications into actual implications</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2223">#2223</a></span> Add global function <code class="code">PositionsBound</code> which returns the set of all bound positions in a given list</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2224">#2224</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2243">#2243</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2340">#2340</a></span> Improve <code class="code">ShowImpliedFilters</code> output</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2225">#2225</a></span> Improve <code class="code">LocationFunc</code> for kernel function</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2232">#2232</a></span> Make <code class="code">ValueGlobal</code> faster</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2242">#2242</a></span> Add global function <code class="code">CyclesFromList</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2244">#2244</a></span> Make <code class="code">rank</code> argument to <code class="code">InstallImmediateMethod</code> optional, similar to <code class="code">InstallMethod</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2274">#2274</a></span> Ensure uniform printing of machine floats nan, inf, -inf across different operating systems</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2287">#2287</a></span> Turn <code class="code">IsInfiniteAbelianizationGroup</code> into a property and add some implications involving it #2287</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2293">#2293</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2602">#2602</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2718">#2718</a></span> Improved and documented various kernel and memory debugging facilities (requires recompiling GAP with <code class="code">--enable-debug</code>, <code class="code">--enable-valgrind</code> resp. <code class="code">--enable-memory-checking</code>)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2308">#2308</a></span> Method selection code was rewritten from GAP to C</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2326">#2326</a></span> Change <code class="code">SimpleGroup</code> to perform better input validation and improve or correct error message for type 2E</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2375">#2375</a></span> Make <code class="code">last2</code> and <code class="code">last3</code> available in break loops</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2383">#2383</a></span> Speed improvements for automorphism groups</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2393">#2393</a></span> Track location of <code class="code">InstallMethod</code> and <code class="code">InstallImmediateMethod</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2422">#2422</a></span> Improve tracking of <code class="code">InstallMethod</code> and <code class="code">DeclareOperation</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2426">#2426</a></span> Speed up <code class="code">InverseMatMod</code> with integer modulus</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2427">#2427</a></span> Fix and complete support for custom functions (i.e., objects which can be called like a function using <code class="code">obj(arg)</code> syntax)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2456">#2456</a></span> Add <code class="code">PrintString</code> and <code class="code">ViewString</code> methods for character tables</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2474">#2474</a></span> Change <code class="code">IsConstantRationalFunction</code> and <code class="code">IsUnivariateRationalFunction</code> to return <code class="code">false</code> if input isn't a rational function (instead of an error)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2474">#2474</a></span> Add methods for multiplying rational functions over arbitrary rings by rationals</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2496">#2496</a></span> Finite groups whose order is known and not divisible by 4 are immediately marked as solvable</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2509">#2509</a></span> Rewrite support for <code class="code">.gz</code> compressed files to use <code class="code">zlib</code>, now works on Windows</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2519">#2519</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2524">#2524</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2531">#2531</a></span> <code class="code">Test</code> now rejects empty inputs and warns if the input contains no test</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2574">#2574</a></span> When reporting syntax errors, GAP now "underlines" the complete last token, not just the position where it stopped parsing</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2577">#2577</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2613">#2613</a></span> Add quadratic and bilinear add forms for <code class="code">Omega(e,d,q)</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2598">#2598</a></span> Add <code class="code">BannerFunction</code> to <code class="code">PackageInfo.g</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2606">#2606</a></span> Improve <code class="code">PageSource</code> to work on functions that were read from a file given by a relative path</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2616">#2616</a></span> Speed up computation of quotients of associative words by using existing (but previously unused) kernel functions for that</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2640">#2640</a></span> Work on MatrixObj and VectorObj</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2654">#2654</a></span> Make <code class="code">Sortex</code> stable</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2666">#2666</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2686">#2686</a></span> Add <code class="code">IsBiCoset</code> attribute for right cosets, which is true if the right coset is also a left coset</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2684">#2684</a></span> Add <code class="code">NormalSubgroups</code> methods for symmetric and alternating permutation groups</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2726">#2726</a></span> Validate <code class="code">PackageInfo.g</code> when loading packages</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2733">#2733</a></span> Minor performance improvements, code cleanup and very local fixes</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2750">#2750</a></span> Reject some invalid uses of <code class="code">~</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2812">#2812</a></span> Reduce memory usage and improve performance the MTC (modified Todd-Coxeter) code that was rewritten in GAP 4.9, but which was much slower than the old (but buggy) code it replaced; the difference is now small, but the old code still is faster in some case.</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2855">#2855</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2877">#2877</a></span> Add <code class="code">IsPackageLoaded</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2878">#2878</a></span> Speed up conjugacy tests for permutation by using random permutation of points when selecting base in centralizer</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2899">#2899</a></span> TestDirectory reports number of failures and failed files</p>
+
+</li>
+</ul>
+<p><a id="X82A7352D8641A11E" name="X82A7352D8641A11E"></a></p>
+
+<h5>2.1-3 <span class="Heading">Changed documentation</span></h5>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2192">#2192</a></span> Add an example for <code class="code">PRump</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2219">#2219</a></span> Add examples to the relations chapter</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2360">#2360</a></span> Document <code class="code">DecomPoly</code> and <code class="code">NormalizerViaRadical</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2366">#2366</a></span> Don't recommend avoiding <code class="code">X</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2432">#2432</a></span> Correct a claim about the index of <code class="code">Omega(e,p,q)</code> in <code class="code">SO(e,p,q)</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2549">#2549</a></span> Update documentation of the <code class="code">-T</code> command line option</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2551">#2551</a></span> Add new command line option <code class="code">--alwaystrace</code> which ensures error backtraces are printed even if break loops are disabled</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2681">#2681</a></span> Documented <code class="code">ClassPositionsOfSolvableRadical</code> and <code class="code">CharacterTableOfNormalSubgroup</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2834">#2834</a></span> Improve manual section about Info classes</p>
+
+</li>
+</ul>
+<p><a id="X842F3691816406D6" name="X842F3691816406D6"></a></p>
+
+<h5>2.1-4 <span class="Heading">Fixed bugs that could lead to crashes</span></h5>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2154">#2154</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2242">#2242</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2294">#2294</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2344">#2344</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2353">#2353</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2736">#2736</a></span> Fix several potential (albeit rare) crashes related to garbage collection</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2196">#2196</a></span> Fix crash in <code class="code">HasKeyBag</code> on SPARC Solaris 11</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2305">#2305</a></span> Fix crash in <code class="code">PartialPerm([1,2,8],[3,4,1,2]);</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2477">#2477</a></span> Fix crash if <code class="code">~</code> is used to modify list</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2499">#2499</a></span> Fix crash in the kernel functions <code class="code">{8,16,32}Bits_ExponentSums3</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2601">#2601</a></span> Fix crash in <code class="code">MakeImmutable(rec(x:=~));</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2665">#2665</a></span> Fix crash when empty filename is passed</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2711">#2711</a></span> Fix crash when tracing buggy attribute/property methods that fail to return a value</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2766">#2766</a></span> Fix obscure crashes by using <code class="code">a!{l}</code> syntax inside a function (this syntax never was fully implemented and was unusable, and now has been removed)</p>
+
+</li>
+</ul>
+<p><a id="X7D8629AE7B18F72B" name="X7D8629AE7B18F72B"></a></p>
+
+<h5>2.1-5 <span class="Heading">Fixed bugs that could lead to incorrect results</span></h5>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2085">#2085</a></span> Fix bugs in <code class="code">JenningsLieAlgebra</code> and <code class="code">PCentralLieAlgebra</code> that could e.g. lead to incorrect <code class="code">LieLowerCentralSeries</code> results</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2113">#2113</a></span> Fix <code class="code">IsMonomial</code> for reducible characters and some related improvements</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2183">#2183</a></span> Fix bug in <code class="code">ValueMolienSeries</code> that could lead to <code class="code">ValueMolienSeries(m,0)</code> not being 1</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2198">#2198</a></span> Make multiplication of larger integers by tiny floats commutative (e.g. now 10.^-300 * 10^400 and 10^400 * 10.^-300 both give infinity, while before 10^400 * 10.^-300 gave 1.e+100); also ensure various strange inputs, like <code class="code">rec() ^ 1;</code>, produce an error (instead of setting <code class="code">a^1 = a</code> and <code class="code">1*a = a</code> for almost any kind of object)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2273">#2273</a></span> Fix <code class="code">TypeOfOperation</code> for setters of and-filters</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2275">#2275</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2280">#2280</a></span> Fix <code class="code">IsFinitelyGeneratedGroup</code> and <code class="code">IsFinitelyGeneratedMonoid</code> to not (incorrectly) assume that a given infinite generating set implies that there is no finite generating set</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2311">#2311</a></span> Don't set <code class="code">IsFinitelyGeneratedGroup</code> for finitely generated magmas which are not groups</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2452">#2452</a></span> Fix bug that allowed creating empty magmas in the filters <code class="code">IsTrivial</code> and <code class="code">IsMagmaWithInverses</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2689">#2689</a></span> Fix <code class="code">LogFFE</code> to not return negative results on 32 bit systems</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2766">#2766</a></span> Fix a bug that allowed creating corrupt permutations</p>
+
+</li>
+</ul>
+<p><a id="X86F4ECE78773DE72" name="X86F4ECE78773DE72"></a></p>
+
+<h5>2.1-6 <span class="Heading">Fixed bugs that could lead to break loops</span></h5>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2040">#2040</a></span> Raise error if eager float literal conversion fails (fixes <span class="URL"><a href="https://github.com/gap-system/gap/pull/1105">#1105</a></span>)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2582">#2582</a></span> Fix <code class="code">ExtendedVectors</code> for trivial vector spaces</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2617">#2617</a></span> Fix <code class="code">HighestWeightModule</code> for Lie algebras in certain cases</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2829">#2829</a></span> Fix <code class="code">ShallowCopy</code> for <code class="code">IteratorOfCartesianProduct</code></p>
+
+</li>
+</ul>
+<p><a id="X8470A7907B252827" name="X8470A7907B252827"></a></p>
+
+<h5>2.1-7 <span class="Heading">Other fixed bugs</span></h5>
+
+
+<ul>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2220">#2220</a></span> Don't set <code class="code">IsSubsetLocallyFiniteGroup</code> filter for finite fields</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2268">#2268</a></span> Handle spaces in filenames of gziped filenames</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2269">#2269</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2660">#2660</a></span> Fix some issues with the interface between GAP and xgap (or other similar frontends for GAP)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2315">#2315</a></span> Prevent creation of groups of floats, just like we prevent creation of groups of cyclotomics</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2350">#2350</a></span> Fix prompt after line continuation</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2365">#2365</a></span> Fix tracing of mutable variants of <code class="code">One</code>/<code class="code">Zero</code>/<code class="code">Inv</code>/<code class="code">AInv</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2398">#2398</a></span> Fix <code class="code">PositionStream</code> to report correct position</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2467">#2467</a></span> Fix support for identifiers of length 1023; and more</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2470">#2470</a></span> Don't display garbage after certain syntax error messages</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2533">#2533</a></span> Fix composing a map with an identity map to not produce a range that is too big</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2638">#2638</a></span> Fix result of <code class="code">Random</code> on 64 bit big endian system to match those on little endian, and on 32 bit big endian</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2672">#2672</a></span> Fix <code class="code">MakeImmutable</code> for weak pointer objects, which previously failed to make subobjects immutable</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2674">#2674</a></span> Fix <code class="code">SaveWorkspace</code> to return false in case of an error, and true only if successful</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2681">#2681</a></span> Fix <code class="code">Display</code> for the character table of a trivial group</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2716">#2716</a></span> When seeding a MersenneTwister from a string, the last few characters would not be used if the string length was not a multiple of 4. Fixing this may lead to different series of random numbers being generated.</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2720">#2720</a></span> Reject workspaces made in a GAP with readline support in a GAP without, and vice versa, instead of crashing</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2657">#2657</a></span> The subobjects of the mutable values of the attributes <code class="code">ComputedClassFusions</code>, <code class="code">ComputedIndicators</code>, <code class="code">ComputedPowerMaps</code>, <code class="code">ComputedPrimeBlockss</code> are now immutable. This makes sure that the values are not accidentally changed. This change may have side-effects in users' code, for example the object returned by <code class="code">0 * ComputedPowerMaps( CharacterTable( "A5" ) )[2]</code> had been a mutable list before the change, and is an immutable list from now on.</p>
+
+</li>
+</ul>
+<p><a id="X7E82CC3E7C54ACEC" name="X7E82CC3E7C54ACEC"></a></p>
+
+<h5>2.1-8 <span class="Heading">Removed or obsolete functionality</span></h5>
+
+
+<ul>
+<li><p>Remove multiple undocumented internal functions. Nobody should have been using them, but if you were, you may extract it from a previous GAP release that still contained it. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2670">#2670</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2781">#2781</a></span> and more)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2335">#2335</a></span> Remove several functions and variables that were deprecated for a long time: <code class="code">DiagonalizeIntMatNormDriven</code>, <code class="code">DeclarePackageDocumentation</code>, <code class="code">KERNEL_VERSION</code>, <code class="code">GAP_ROOT_PATHS</code>, <code class="code">LOADED_PACKAGES</code>, <code class="code">PACKAGES_VERSIONS</code>, <code class="code">IsTuple</code>, <code class="code">StateRandom</code>, <code class="code">RestoreStateRandom</code>, <code class="code">StatusRandom</code>, <code class="code">FactorCosetOperation</code>, <code class="code">ShrinkCoeffs</code>, <code class="code">ExcludeFromAutoload</code>, <code class="code">CharacterTableDisplayPrintLegendDefault</code>, <code class="code">ConnectGroupAndCharacterTable</code>, <code class="code">IsSemilatticeAsSemigroup</code>, <code class="code">CreateCompletionFiles</code>, <code class="code">PositionFirstComponent</code>, <code class="code">ViewLength</code></p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2502">#2502</a></span> Various kernel functions now validate their inputs more carefully (making it harder to produce bad effects by accidentally passing bad data to them)</p>
+
+</li>
+<li><p><span class="URL"><a href="https://github.com/gap-system/gap/pull/2700">#2700</a></span> Forbid constructors with 0 arguments (they were never meaningful)</p>
+
+</li>
+</ul>
+<p><a id="X844ECC8387ADC6D7" name="X844ECC8387ADC6D7"></a></p>
+
+<h5>2.1-9 <span class="Heading">Packages</span></h5>
+
+
+<ul>
+<li><p>The <code class="code">recogbase</code> package has been merged into the <code class="code">recog</code> package, and therefore is no longer distributed with GAP.</p>
+
+</li>
+<li><p>The <code class="code">linboxing</code> package has been unusable (it does not compile) for several years now, and is unmaintained. It was therefore dropped from the GAP package distribution. If anybody is willing to take over and fix the package, the latest sources are available at <span class="URL"><a href="https://github.com/gap-packages/linboxing">https://github.com/gap-packages/linboxing</a></span>.</p>
+
+</li>
+</ul>
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

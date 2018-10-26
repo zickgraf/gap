@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (changes) - Chapter 3: Changes between GAP 4.8 and GAP 4.9</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap3"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap3.html">[MathJax off]</a></p>
+<p><a id="X7DE3F944789F9676" name="X7DE3F944789F9676"></a></p>
+<div class="ChapSects"><a href="chap3_mj.html#X7DE3F944789F9676">3 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.8 and <strong class="pkg">GAP</strong> 4.9</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7E74F2127F858880">3.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.1 (May 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X87E35B7B7D7B2AF6">3.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7F52B77B7DBACC17">3.1-2 <span class="Heading"><strong class="pkg">HPC-GAP</strong></span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X875343D47A7B5E62">3.1-3 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.10</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X788623D37D59433D">3.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.2 (July 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X80F675A48712F934">3.2-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9.2</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X85F5CB9C80D89E10">3.2-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.9.1</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7DCF1B2984AEB7F0">3.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.3 (September 2018)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X878606AD8708A3AF">3.3-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9.3</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7C655E8782735518">3.3-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.9.2</span></a>
+</span>
+</div></div>
+</div>
+
+<h3>3 <span class="Heading">Changes between <strong class="pkg">GAP</strong> 4.8 and <strong class="pkg">GAP</strong> 4.9</span></h3>
+
+<p>This chapter contains an overview of the most important changes introduced in <strong class="pkg">GAP</strong> 4.9.1 release (the 1st public release of <strong class="pkg">GAP</strong> 4.9). Later it will also contain information about subsequent update releases for <strong class="pkg">GAP</strong> 4.9.</p>
+
+<p>These changes are also listed on the Wiki page <span class="URL"><a href="https://github.com/gap-system/GAP/wiki/gap-4.9-release-notes">https://github.com/gap-system/GAP/wiki/gap-4.9-release-notes</a></span>.</p>
+
+<p><a id="X7E74F2127F858880" name="X7E74F2127F858880"></a></p>
+
+<h4>3.1 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.1 (May 2018)</span></h4>
+
+<p><a id="X87E35B7B7D7B2AF6" name="X87E35B7B7D7B2AF6"></a></p>
+
+<h5>3.1-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9</span></h5>
+
+<p>Major changes:</p>
+
+
+<ul>
+<li><p>Merged <strong class="pkg">HPC-GAP</strong> into <strong class="pkg">GAP</strong>. For details, please refer to Subsection <a href="chap3_mj.html#X7F52B77B7DBACC17"><span class="RefLink">3.1-2</span></a> at the end of these release notes.</p>
+
+</li>
+<li><p><strong class="pkg">GAP</strong> has a new build system, which resolves many quirks and issues with the old system, and will be easier to maintain. For regular users, the usual <code class="code">./configure &amp;&amp; make</code> should work fine as before. If you are interested in technical details on the new build system, take a look at <code class="file">README.buildsys.md</code>.</p>
+
+</li>
+<li><p>The guidelines for developing <strong class="pkg">GAP</strong> packages were revised and moved from the Example package to <a href="../../doc/ref/chap76_mj.html#X79F76C1E834BFDCC"><span class="RefLink">Reference: Using and Developing GAP Packages</span></a> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/484">#484</a></span>).</p>
+
+</li>
+<li><p>In addition to supporting single argument lambda functions like <code class="code">a -&gt; a+1</code>, <strong class="pkg">GAP</strong> now supports lambdas with fewer or more than one argument, or even a variable number. E.g. <code class="code">{a,b} -&gt; a+b</code> is a shorthand for <code class="code">function(a,b) return a+b; end</code>. For details on how to use this, see <a href="../../doc/ref/chap4_mj.html#X815F71EA7BC0EB6F"><span class="RefLink">Reference: Function</span></a>. For technical details, e.g. why we did not choose the syntax <code class="code">(a,b) -&gt; a+b</code>, see <span class="URL"><a href="https://github.com/gap-system/gap/pull/490">#490</a></span>.</p>
+
+</li>
+<li><p>Function calls, list accesses and records accesses now can be nested. For example, you can now write <code class="code">y := f().x;</code> (essentially equivalent to <code class="code">y := f();; y := y.x;</code>), which previously would have resulted in an error; see <span class="URL"><a href="https://github.com/gap-system/gap/issues/457">#457</a></span> and <span class="URL"><a href="https://github.com/gap-system/gap/pull/462">#462</a></span>).</p>
+
+</li>
+<li><p>The libraries of small, primitive and transitive groups which previously were an integral part of <strong class="pkg">GAP</strong> were split into three separate packages <span class="URL"><a href="http://gap-packages.github.io/primgrp/">PrimgGrp</a></span>, <span class="URL"><a href="https://gap-packages.github.io/smallgrp/">SmallGrp</a></span> and <span class="URL"><a href="http://www.math.colostate.edu/~hulpke/transgrp/">TransGrp</a></span>. For backwards compatibility, these are required packages in <strong class="pkg">GAP</strong> 4.9 (i.e., <strong class="pkg">GAP</strong> will not start without them). We plan to change this for <strong class="pkg">GAP</strong> 4.10 (see <span class="URL"><a href="https://github.com/gap-system/gap/pull/2434">#2434</a></span>), once all packages which currently implicitly rely on these new packages had time to add explicit dependencies on them (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1650">#1650</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1714">#1714</a></span>).</p>
+
+</li>
+<li><p>The performance of <strong class="pkg">GAP</strong>'s sorting functions (such as <code class="func">Sort</code> (<a href="../../doc/ref/chap21_mj.html#X7FE4975F8166884D"><span class="RefLink">Reference: Sort</span></a>), <code class="func">SortParallel</code> (<a href="../../doc/ref/chap21_mj.html#X791F2B2C7E9B9A46"><span class="RefLink">Reference: SortParallel</span></a>), etc.) has been substantially improved, in some examples by more than a factor of four: as a trivial example, compare the timing for <code class="code">Sort([1..100000000] * 0)</code>. As a side effect, the result of sorting lists with equal entries may produce different answers compared to previous <strong class="pkg">GAP</strong> versions. If you would like to make your code independant of the exact employed sorting algorithm, you can use the newly added <code class="func">StableSort</code> (<a href="../../doc/ref/chap21_mj.html#X7FE4975F8166884D"><span class="RefLink">Reference: StableSort</span></a>), <code class="func">StableSortBy</code> (<a href="../../doc/ref/chap21_mj.html#X7FE4975F8166884D"><span class="RefLink">Reference: StableSortBy</span></a>) and <code class="func">StableSortParallel</code> (<a href="../../doc/ref/chap21_mj.html#X791F2B2C7E9B9A46"><span class="RefLink">Reference: StableSortParallel</span></a>). (For some technical details, see <span class="URL"><a href="https://github.com/gap-system/gap/pull/609">#609</a></span>).</p>
+
+</li>
+<li><p>We removed our old home-grown big integer code, and instead always use the GMP based big integer code. This means that the GMP library now is a required dependency, not just an optional one. Note that GAP has been using GMP big integer arithmetic for a long time by default, and we also have been bundling GMP with GAP. So this change mostly removed code that was never in use for most users.</p>
+
+</li>
+<li><p>A number of improvements have been made to <code class="func">Random</code> (<a href="../../doc/ref/chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">Reference: Random</span></a>). These may lead to different sequences of numbers being created. On the up side, many more methods for <code class="func">Random</code> (<a href="../../doc/ref/chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">Reference: Random</span></a>) (and other <code class="code">RandomXYZ</code> operations) now optionally take an explicit <code class="func">RandomSource</code> (<a href="../../doc/ref/chap14_mj.html#X7CB0B5BC82F8FD8F"><span class="RefLink">Reference: RandomSource</span></a>) as first argument (but not yet all: help with issue <span class="URL"><a href="https://github.com/gap-system/gap/pull/1098">#1098</a></span> is welcome). Some relevant pull requests:</p>
+
+
+<ul>
+<li><p>Allow creating random permutations using a random source (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1165">#1165</a></span>)</p>
+
+</li>
+<li><p>Let more <code class="func">Random</code> (<a href="../../doc/ref/chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">Reference: Random</span></a>) methods use an alternative source (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1168">#1168</a></span>)</p>
+
+</li>
+<li><p>Help <code class="func">Random</code> (<a href="../../doc/ref/chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">Reference: Random</span></a>) methods to use <code class="func">RandomSource</code> (<a href="../../doc/ref/chap14_mj.html#X7CB0B5BC82F8FD8F"><span class="RefLink">Reference: RandomSource</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/810">#810</a></span>)</p>
+
+</li>
+<li><p>Remove uses of old random generator (<span class="URL"><a href="https://github.com/gap-system/gap/pull/808">#808</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">Random</code> (<a href="../../doc/ref/chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">Reference: Random</span></a>) on long (&gt;2^28) lists (<span class="URL"><a href="https://github.com/gap-system/gap/pull/781">#781</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">RandomUnimodularMat</code> (<a href="../../doc/ref/chap24_mj.html#X84743732846ACB44"><span class="RefLink">Reference: RandomUnimodularMat</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1511">#1511</a></span>)</p>
+
+</li>
+<li><p>Use <code class="func">RandomSource</code> (<a href="../../doc/ref/chap14_mj.html#X7CB0B5BC82F8FD8F"><span class="RefLink">Reference: RandomSource</span></a>) in a few more places (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1599">#1599</a></span>)</p>
+
+</li>
+</ul>
+</li>
+<li><p>The output and behaviour of the profiling system has been substantially improved:</p>
+
+
+<ul>
+<li><p>Make profiling correctly handle the same file being opened multiple times (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1069">#1069</a></span>)</p>
+
+</li>
+<li><p>Do not profile the <code class="code">return</code> statements (<a href="../../doc/ref/chap6_mj.html#X7A388B808167FE09"><span class="RefLink">Reference: return</span></a>) inserted into the end of functions (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1073">#1073</a></span>)</p>
+
+</li>
+<li><p>Ensure we reset <code class="code">OutputtedFilenameList</code> in profiling when a workspace is restored (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1164">#1164</a></span>)</p>
+
+</li>
+<li><p>Better tracking of amounts of memory allocated and time spent in the garbage collector (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1806">#1806</a></span>)</p>
+
+</li>
+<li><p>Allow profiling of memory usage (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1808">#1808</a></span>)</p>
+
+</li>
+<li><p>Remove profiling limit on files with &lt;= 2^16 lines (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1913">#1913</a></span>)</p>
+
+</li>
+</ul>
+</li>
+<li><p>In many cases <strong class="pkg">GAP</strong> now outputs the filename and location of functions in helpful places, e.g. in error messages or when displaying compiled functions. We also try to always use the format <code class="code">FILENAME:LINE</code>, which various utilities already know how to parse (e.g. in <strong class="pkg">iTerm2</strong>, cmd-clicking on such a string can be configured to open an editor for the file at the indicated line). For some technical details, see <span class="URL"><a href="https://github.com/gap-system/gap/pull/469">#469</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/755)">#755</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1058">#1058</a></span>.</p>
+
+</li>
+<li><p><strong class="pkg">GAP</strong> now supports constant variables, whose value cannot change anymore during runtime; code using such constants can then be slightly optimized by <strong class="pkg">GAP</strong>. E.g. if <code class="code">foo</code> is turned into a constant variable bound to the value <code class="keyw">false</code>, then <strong class="pkg">GAP</strong> can optimize <code class="code">if foo then ... fi;</code> blocks completely away. For details, see <code class="func">MakeConstantGlobal</code> (<a href="../../doc/ref/chap4_mj.html#X847706237E72418F"><span class="RefLink">Reference: MakeConstantGlobal</span></a>) in <a href="../../doc/ref/chap4_mj.html#X816FBEEA85782EC2"><span class="RefLink">Reference: More About Global Variables</span></a>. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1682">#1682</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1770">#1770</a></span>)</p>
+
+</li>
+</ul>
+<p>Other changes:</p>
+
+
+<ul>
+<li><p>Enhance <code class="func">StructureDescription</code> (<a href="../../doc/ref/chap39_mj.html#X8199B74B84446971"><span class="RefLink">Reference: StructureDescription</span></a>) with a major rewrite, enhancing <code class="code">DirectFactorsOfGroup"</code> and adding <code class="code">SemidirectDecompositions</code>; the core algorithm now also works for infinite abelian groups. Further, it became faster by quickly finding abelian direct factors and recognizing several cases where the group is direct indecomposable. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/379">#379</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/763">#763</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/985">#985</a></span>)</p>
+
+</li>
+<li><p>Mark <code class="func">FittingSubgroup</code> (<a href="../../doc/ref/chap39_mj.html#X780552B57C30DD8F"><span class="RefLink">Reference: FittingSubgroup</span></a>) and <code class="func">FrattiniSubgroup</code> (<a href="../../doc/ref/chap39_mj.html#X788C856C82243274"><span class="RefLink">Reference: FrattiniSubgroup</span></a>) as nilpotent (<span class="URL"><a href="https://github.com/gap-system/gap/pull/400">#400</a></span>)</p>
+
+</li>
+<li><p>Add method for <code class="func">Socle</code> (<a href="../../doc/ref/chap39_mj.html#X81F647FA83D8854F"><span class="RefLink">Reference: Socle</span></a>) for finite nilpotent groups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/402">#402</a></span>)</p>
+
+</li>
+<li><p>Change <code class="func">ViewString</code> (<a href="../../doc/ref/chap27_mj.html#X7803FBCA79DB5529"><span class="RefLink">Reference: ViewString</span></a>) and <code class="func">String</code> (<a href="../../doc/ref/chap27_mj.html#X81FB5BE27903EC32"><span class="RefLink">Reference: String</span></a>) methods for various inverse semigroups and monoids (<span class="URL"><a href="https://github.com/gap-system/gap/pull/438">#438</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/880">#880</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/882">#882</a></span>)</p>
+
+</li>
+<li><p>Enhance some nilpotent and <span class="SimpleMath">\(p\)</span>-group attributes (<span class="URL"><a href="https://github.com/gap-system/gap/pull/442">#442</a></span>)</p>
+
+</li>
+<li><p>Improve <code class="func">Union</code> (<a href="../../doc/ref/chap30_mj.html#X799F0E2F7A502DBA"><span class="RefLink">Reference: Union</span></a>) for a list with many ranges (<span class="URL"><a href="https://github.com/gap-system/gap/pull/444">#444</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">UserHomeExpand</code> (<a href="../../doc/ref/chap9_mj.html#X83F3B0337C7EA5CC"><span class="RefLink">Reference: UserHomeExpand</span></a>), a function to expand <code class="code">~</code> in filenames. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/447">#447</a></span>)</p>
+
+</li>
+<li><p>Extra hint in "No Method Found" error message if one of the arguments is <code class="keyw">fail</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/460">#460</a></span>)</p>
+
+</li>
+<li><p>Tell Sylow subgroups of natural <span class="SimpleMath">\(A_n\)</span> or <span class="SimpleMath">\(S_n\)</span> their size when we make them (<span class="URL"><a href="https://github.com/gap-system/gap/pull/529">#529</a></span>)</p>
+
+</li>
+<li><p>Some small enhancements on Sylow and Hall subgroup computations, mostly for nilpotent groups. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/535">#535</a></span>)</p>
+
+</li>
+<li><p>Remove <code class="file">.zoo</code> archive related tools (<span class="URL"><a href="https://github.com/gap-system/gap/pull/540">#540</a></span>)</p>
+
+</li>
+<li><p>Add new <code class="func">FrattiniSubgroup</code> (<a href="../../doc/ref/chap39_mj.html#X788C856C82243274"><span class="RefLink">Reference: FrattiniSubgroup</span></a>), <code class="func">MaximalNormalSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X82ECAA427C987318"><span class="RefLink">Reference: MaximalNormalSubgroups</span></a>), <code class="func">MinimalNormalSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X86FDD9BA819F5644"><span class="RefLink">Reference: MinimalNormalSubgroups</span></a>) and <code class="func">Socle</code> (<a href="../../doc/ref/chap39_mj.html#X81F647FA83D8854F"><span class="RefLink">Reference: Socle</span></a>) methods for abelian and/or solvable groups, even infinite ones. The new methods are only triggered if the group already knows that it is abelian and/or solvable. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/552">#552</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/583">#583</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/606">#606</a></span>)</p>
+
+</li>
+<li><p>New attribute <code class="code">NormalHallSubgroups</code>, returning a list of all normal Hall subgroups of a group. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/561">#561</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">ComplementClassesRepresentatives</code> (<a href="../../doc/ref/chap39_mj.html#X811B8A4683DDE1F9"><span class="RefLink">Reference: ComplementClassesRepresentatives</span></a>) fallback method for arbitrary groups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/563">#563</a></span>)</p>
+
+</li>
+<li><p>(<span class="URL"><a href="https://github.com/gap-system/gap/pull/612">#612</a></span>) Add parsing of hex literals in strings, e.g. <code class="code">"\0x61"</code> is turned into <code class="code">"a"</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/612">#612</a></span>)</p>
+
+</li>
+<li><p>Collection of enhancements (<span class="URL"><a href="https://github.com/gap-system/gap/pull/683">#683</a></span>)</p>
+
+</li>
+<li><p>Various speed improvements to polynomial factorisation and the <strong class="pkg">GAP</strong> MeatAxe (<span class="URL"><a href="https://github.com/gap-system/gap/pull/720">#720</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1027">#1027</a></span>)</p>
+
+</li>
+<li><p>The code and documentation for transformations is improved and corrected in many instances (<span class="URL"><a href="https://github.com/gap-system/gap/pull/727">#727</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/732">#732</a></span>)</p>
+
+</li>
+<li><p>Change <code class="code">RootFFE</code> to optionally takes a field or field size as first argument, from which the roots will be taken (<span class="URL"><a href="https://github.com/gap-system/gap/pull/761">#761</a></span>)</p>
+
+</li>
+<li><p>Change <code class="func">Permanent</code> (<a href="../../doc/ref/chap16_mj.html#X7F0942DD83BBAB7A"><span class="RefLink">Reference: Permanent</span></a>) from a global function to an attribute (<span class="URL"><a href="https://github.com/gap-system/gap/pull/777">#777</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">CallFuncListWrap</code> (<a href="../../doc/ref/chap5_mj.html#X7CF4DDB97D65AE52"><span class="RefLink">Reference: CallFuncListWrap</span></a>) to wrap return value to allow distinguishing between functions which return and functions which don't (<span class="URL"><a href="https://github.com/gap-system/gap/pull/824">#824</a></span>)</p>
+
+</li>
+<li><p>Allow repeated use of same <code class="func">DeclareSynonym</code> (<a href="../../doc/ref/chap79_mj.html#X851654DA87616207"><span class="RefLink">Reference: DeclareSynonym</span></a>) call (<span class="URL"><a href="https://github.com/gap-system/gap/pull/835">#835</a></span>)</p>
+
+</li>
+<li><p>New implementation of modified Todd-Coxeter (the old one had bugs, see <span class="URL"><a href="https://github.com/gap-system/gap/issues/302">#302</a></span>), <span class="URL"><a href="https://github.com/gap-system/gap/pull/843">#843</a></span>)</p>
+
+</li>
+<li><p>New functionality: Cannon/Holt automorphisms and others (<span class="URL"><a href="https://github.com/gap-system/gap/pull/878">#878</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">IsPowerfulPGroup</code> (<a href="../../doc/ref/chap39_mj.html#X7F232B3F8261CE25"><span class="RefLink">Reference: IsPowerfulPGroup</span></a>) property, and a <code class="func">FrattiniSubgroup</code> (<a href="../../doc/ref/chap39_mj.html#X788C856C82243274"><span class="RefLink">Reference: FrattiniSubgroup</span></a>) method for powerful <span class="SimpleMath">\(p\)</span>-groups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/894">#894</a></span>)</p>
+
+</li>
+<li><p>Improve performance for group isomorphism/automorphisms (<span class="URL"><a href="https://github.com/gap-system/gap/pull/896">#896</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/968">#968</a></span>)</p>
+
+</li>
+<li><p>Make <code class="func">ListX</code> (<a href="../../doc/ref/chap21_mj.html#X8258477D7F72171B"><span class="RefLink">Reference: ListX</span></a>), <code class="func">SetX</code> (<a href="../../doc/ref/chap21_mj.html#X7AC321B87A2DCAF5"><span class="RefLink">Reference: SetX</span></a>), <code class="func">SumX</code> (<a href="../../doc/ref/chap21_mj.html#X82B1411E7FBE925F"><span class="RefLink">Reference: SumX</span></a>) and <code class="func">ProductX</code> (<a href="../../doc/ref/chap21_mj.html#X7FB318B47D8783DA"><span class="RefLink">Reference: ProductX</span></a>) support lists which are not collections (<span class="URL"><a href="https://github.com/gap-system/gap/pull/903">#903</a></span>)</p>
+
+</li>
+<li><p>Some improvements for <code class="func">LatticeByCyclicExtension</code> (<a href="../../doc/ref/chap39_mj.html#X86462A567DDBA6BC"><span class="RefLink">Reference: LatticeByCyclicExtension</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/905">#905</a></span>)</p>
+
+</li>
+<li><p>Add helpers to retrieve information about operations and filters: <code class="func">CategoryByName</code> (<a href="../../doc/ref/chap79_mj.html#X85D07C3E7F4D4043"><span class="RefLink">Reference: CategoryByName</span></a>), <code class="func">TypeOfOperation</code> (<a href="../../doc/ref/chap79_mj.html#X813BE52887A3E0FA"><span class="RefLink">Reference: TypeOfOperation</span></a>), <code class="func">FilterByName</code> (<a href="../../doc/ref/chap79_mj.html#X7F6645D87DD26CF0"><span class="RefLink">Reference: FilterByName</span></a>), <code class="func">FiltersObj</code> (<a href="../../doc/ref/chap13_mj.html#X836FAA18861BE387"><span class="RefLink">Reference: FiltersObj</span></a>), <code class="func">FiltersType</code> (<a href="../../doc/ref/chap13_mj.html#X836FAA18861BE387"><span class="RefLink">Reference: FiltersType</span></a>), <code class="code">IdOfFilter</code>, <code class="code">IdOfFilterByName</code>, <code class="func">IsAttribute</code> (<a href="../../doc/ref/chap79_mj.html#X7973C8F4782D15A1"><span class="RefLink">Reference: IsAttribute</span></a>), <code class="func">IsCategory</code> (<a href="../../doc/ref/chap79_mj.html#X792A23BF82BDF66B"><span class="RefLink">Reference: IsCategory</span></a>), <code class="func">IsProperty</code> (<a href="../../doc/ref/chap79_mj.html#X81F1C3EE83003FA0"><span class="RefLink">Reference: IsProperty</span></a>), <code class="func">IsRepresentation</code> (<a href="../../doc/ref/chap79_mj.html#X86D42C7783ACA5F4"><span class="RefLink">Reference: IsRepresentation</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/925">#925</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1593">#1593</a></span>)</p>
+
+</li>
+<li><p>Add case-insensitive autocomplete (<span class="URL"><a href="https://github.com/gap-system/gap/pull/928">#928</a></span>)</p>
+
+</li>
+<li><p>Give better error message if a help file is missing (<span class="URL"><a href="https://github.com/gap-system/gap/pull/939">#939</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">LowercaseChar</code> (<a href="../../doc/ref/chap27_mj.html#X87A2F2557DE7EE08"><span class="RefLink">Reference: LowercaseChar</span></a>) and <code class="func">UppercaseChar</code> (<a href="../../doc/ref/chap27_mj.html#X81E0AEE687200505"><span class="RefLink">Reference: UppercaseChar</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/952">#952</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">PositionMaximum</code> (<a href="../../doc/ref/chap21_mj.html#X7FD9C1D37F300206"><span class="RefLink">Reference: PositionMaximum</span></a>) and <code class="func">PositionMinimum</code> (<a href="../../doc/ref/chap21_mj.html#X7FD9C1D37F300206"><span class="RefLink">Reference: PositionMinimum</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/956">#956</a></span>)</p>
+
+</li>
+<li><p>Switching default command history length from infinity to 1000 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/960">#960</a></span>)</p>
+
+</li>
+<li><p>Allow conversion of <code class="code">-infinity</code> to float via <code class="func">NewFloat</code> (<a href="../../doc/ref/chap19_mj.html#X86D5EA93813FB6C4"><span class="RefLink">Reference: NewFloat</span></a>) and <code class="func">MakeFloat</code> (<a href="../../doc/ref/chap19_mj.html#X86D5EA93813FB6C4"><span class="RefLink">Reference: MakeFloat</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/961">#961</a></span>)</p>
+
+</li>
+<li><p>Add option <code class="code">NoPrecomputedData</code> to avoid use of data libraries in certain computations (useful if one wants to verify the content of these data libraries) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/986">#986</a></span>)</p>
+
+</li>
+<li><p>Remove one-argument version of <code class="func">AsPartialPerm</code> (<a href="../../doc/ref/chap54_mj.html#X81B32CB182489ACA"><span class="RefLink">Reference: AsPartialPerm for a permutation and a set of positive integers</span></a>) for a transformation (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1036">#1036</a></span>)</p>
+
+</li>
+<li><p>Partial perms now have a <code class="func">MultiplicativeZero</code> (<a href="../../doc/ref/chap35_mj.html#X7B39F93C8136D642"><span class="RefLink">Reference: MultiplicativeZero</span></a>) rather than a <code class="func">Zero</code> (<a href="../../doc/ref/chap31_mj.html#X8040AC7A79FFC442"><span class="RefLink">Reference: Zero</span></a>), since they are multiplicative rather than additive elements (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1040">#1040</a></span>)</p>
+
+</li>
+<li><p>Various enhancements: (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1046">#1046</a></span>)</p>
+
+
+<ul>
+<li><p>A bugfix in <code class="func">NaturalHomomorphismByIdeal</code> (<a href="../../doc/ref/chap56_mj.html#X83D53D98809EC461"><span class="RefLink">Reference: NaturalHomomorphismByIdeal</span></a>) for polynomial rings</p>
+
+</li>
+<li><p>Improvements in handling solvable permutation groups</p>
+
+</li>
+<li><p>The trivial group now is a member of the perfect groups library</p>
+
+</li>
+<li><p>Improvements in using tabulated data for maximal subgroups</p>
+
+</li>
+</ul>
+</li>
+<li><p>New tests for group constructors and some fixes (e.g. <code class="code">GO(1,4,5)</code> used to trigger an error) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1053">#1053</a></span>)</p>
+
+</li>
+<li><p>Make <code class="code">HasSolvableFactorGroup</code> slightly more efficient (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1062">#1062</a></span>)</p>
+
+</li>
+<li><p>Enhance <code class="code">HasXXFactorGroup</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1066">#1066</a></span>)</p>
+
+</li>
+<li><p>Remove GAP4stones from tests (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1072">#1072</a></span>)</p>
+
+</li>
+<li><p><code class="func">AsMonoid</code> (<a href="../../doc/ref/chap51_mj.html#X7B22038F832B9C0F"><span class="RefLink">Reference: AsMonoid</span></a>) and <code class="func">AsSemigroup</code> (<a href="../../doc/ref/chap51_mj.html#X80ED104F85AE5134"><span class="RefLink">Reference: AsSemigroup</span></a>) are now operations, and various bugs were resolved related to isomorphisms of semigroups and monoids (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1112">#1112</a></span>)</p>
+
+</li>
+<li><p>Mark isomorphisms between trivial groups as bijective (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1116">#1116</a></span>)</p>
+
+</li>
+<li><p>Speed up <code class="func">RootMod</code> (<a href="../../doc/ref/chap15_mj.html#X83E3ED577B7A04ED"><span class="RefLink">Reference: RootMod</span></a>) and <code class="func">RootsMod</code> (<a href="../../doc/ref/chap15_mj.html#X84D3F03B862841F8"><span class="RefLink">Reference: RootsMod</span></a>) for moduli with large prime factors; also add <code class="code">IS_PROBAB_PRIME_INT</code> kernel function (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1141">#1141</a></span>)</p>
+
+</li>
+<li><p>The search for the documentation of system setters and testers now returns corresponding attributes and properties (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1144">#1144</a></span>)</p>
+
+</li>
+<li><p>Remove command line options <code class="code">-c</code>, <code class="code">-U</code>, <code class="code">-i</code> and <code class="code">-X</code>, add <code class="code">--quitonbreak</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1192">#1192</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1265">#1265</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1421">#1421</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1448">#1448</a></span>)</p>
+
+</li>
+<li><p>Remove Itanium support (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1163">#1163</a></span>)</p>
+
+</li>
+<li><p>Adding two strings now shows a more helpful error message (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1314">#1314</a></span>)</p>
+
+</li>
+<li><p>Suppress <code class="code">Unbound global variable</code> warning in <code class="func">IsBound</code> (<a href="../../doc/ref/chap4_mj.html#X842B89D4860FD5DB"><span class="RefLink">Reference: IsBound for a global variable</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1334">#1334</a></span>)</p>
+
+</li>
+<li><p>Increase warning level for Conway polynomial (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1363">#1363</a></span>)</p>
+
+</li>
+<li><p>Performance improvements to maximal and intermediate subgroups, fix of <code class="func">RepresentativeAction</code> (<a href="../../doc/ref/chap41_mj.html#X857DC7B085EB0539"><span class="RefLink">Reference: RepresentativeAction</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1390">#1390</a></span>)</p>
+
+</li>
+<li><p>Revise Chapter 52 of the reference manual (fp semigroups and monoids) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1441">#1441</a></span>)</p>
+
+</li>
+<li><p>Improve the performance of the <code class="code">Info</code> (<a href="../../doc/ref/chap7_mj.html#X864E4B6886E2697D"><span class="RefLink">Reference: Info</span></a>) statement (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1464">#1464</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1770">#1770</a></span>)</p>
+
+</li>
+<li><p>When printing function bodies, avoid some redundant spaces (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1498">#1498</a></span>)</p>
+
+</li>
+<li><p>Add kernel functions for directly accessing entries of GF2/8bit compressed matrices (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1585">#1585</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">String</code> (<a href="../../doc/ref/chap27_mj.html#X81FB5BE27903EC32"><span class="RefLink">Reference: String</span></a>) method for functions (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1591">#1591</a></span>)</p>
+
+</li>
+<li><p>Check modules were compiled with the same version of <strong class="pkg">GAP</strong> when loading them (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1600">#1600</a></span>)</p>
+
+</li>
+<li><p>When printing function, reproduce <code class="code">TryNextMethod()</code> correctly (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1613">#1613</a></span>)</p>
+
+</li>
+<li><p>New "Bitfields" feature (<a href="../../doc/ref/chap14_mj.html#X7A0311DF78DB4FD8"><span class="RefLink">Reference: Bitfields</span></a>) providing efficient support for packing multiple data items into a single word for cache and memory efficiency (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1616">#1616</a></span>)</p>
+
+</li>
+<li><p>Improved <code class="file">bin/BuildPackages.sh</code>, in particular added option to abort upon failure (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2022">#2022</a></span>)</p>
+
+</li>
+<li><p>Rewrote integer code (GMP) for better performance of certain large integer operations, and added kernel implementations of various functions, including these:</p>
+
+
+<ul>
+<li><p>Add kernel implementations of <code class="func">AbsInt</code> (<a href="../../doc/ref/chap14_mj.html#X782095927FB9F1DB"><span class="RefLink">Reference: AbsInt</span></a>), <code class="func">SignInt</code> (<a href="../../doc/ref/chap14_mj.html#X842614817FE48D62"><span class="RefLink">Reference: SignInt</span></a>); add new kernel functions <code class="code">ABS_RAT</code>, <code class="code">SIGN_RAT</code>; and speed up <a href="../../doc/ref/chap4_mj.html#X7B66C8707B5DE10A"><span class="RefLink">Reference: mod</span></a>, <code class="func">RemInt</code> (<a href="../../doc/ref/chap14_mj.html#X805ADD5A826D844D"><span class="RefLink">Reference: RemInt</span></a>), <code class="func">QuoInt</code> (<a href="../../doc/ref/chap14_mj.html#X849D0F807F697D35"><span class="RefLink">Reference: QuoInt</span></a>) for divisors which are small powers of 2 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1045">#1045</a></span>)</p>
+
+</li>
+<li><p>Add kernel implementations of <code class="func">Jacobi</code> (<a href="../../doc/ref/chap15_mj.html#X83449DBC80495971"><span class="RefLink">Reference: Jacobi</span></a>), <code class="func">PowerModInt</code> (<a href="../../doc/ref/chap14_mj.html#X7E404B1183DBC82A"><span class="RefLink">Reference: PowerModInt</span></a>), <code class="func">Valuation</code> (<a href="../../doc/ref/chap68_mj.html#X80D67BB67A509A56"><span class="RefLink">Reference: Valuation</span></a>) (for integers), <code class="func">PValuation</code> (<a href="../../doc/ref/chap15_mj.html#X8243EAA586D78ED4"><span class="RefLink">Reference: PValuation</span></a>) (for integers) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1045">#1075</a></span>)</p>
+
+</li>
+<li><p>Add kernel implementation of <code class="func">Factorial</code> (<a href="../../doc/ref/chap16_mj.html#X87665F748594BF29"><span class="RefLink">Reference: Factorial</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1969">#1969</a></span>)</p>
+
+</li>
+<li><p>Add kernel implementation of <code class="func">Binomial</code> (<a href="../../doc/ref/chap16_mj.html#X7A9AF5F58682819D"><span class="RefLink">Reference: Binomial</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1921">#1921</a></span>)</p>
+
+</li>
+<li><p>Add kernel implementation of <code class="func">LcmInt</code> (<a href="../../doc/ref/chap14_mj.html#X7B33143E78A8DDE3"><span class="RefLink">Reference: LcmInt</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2019">#2019</a></span>)</p>
+
+</li>
+</ul>
+</li>
+<li><p>Check version of kernel for package versions (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1600">#1600</a></span>)</p>
+
+</li>
+<li><p>Add new <code class="func">AlgebraicExtensionNC</code> (<a href="../../doc/ref/chap67_mj.html#X7CDA90537D2BAC8A"><span class="RefLink">Reference: AlgebraicExtensionNC</span></a>) operation (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1665">#1665</a></span>)</p>
+
+</li>
+<li><p>Add <code class="code">NumberColumns</code> and <code class="code">NumberRows</code> to <code class="code">MatrixObj</code> interface (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1657">#1657</a></span>)</p>
+
+</li>
+<li><p><code class="func">MinimalGeneratingSet</code> (<a href="../../doc/ref/chap39_mj.html#X81D15723804771E2"><span class="RefLink">Reference: MinimalGeneratingSet</span></a>) returns an answer for non-cyclic groups that already have a generating set of size 2 (which hence is minimal) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1755">#1755</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">GetWithDefault</code> (<a href="../../doc/ref/chap21_mj.html#X866F45D3797FDA00"><span class="RefLink">Reference: GetWithDefault</span></a>) which returns the <span class="SimpleMath">\(n\)</span>-th element of the list if it is bound, and the default value otherwise (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1762">#1762</a></span>)</p>
+
+</li>
+<li><p>Fast method for <code class="code">ElmsBlist</code> when positions are a range with increment 1 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1773">#1773</a></span>)</p>
+
+</li>
+<li><p>Make permutations remember their inverses (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1831">#1831</a></span>)</p>
+
+</li>
+<li><p>Add invariant forms for <code class="code">GU(1,q)</code> and <code class="code">SU(1,q)</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1874">#1874</a></span>)</p>
+
+</li>
+<li><p>Implement <code class="func">StandardAssociate</code> (<a href="../../doc/ref/chap56_mj.html#X7B1A9A4C7C59FB36"><span class="RefLink">Reference: StandardAssociate</span></a>) and <code class="func">StandardAssociateUnit</code> (<a href="../../doc/ref/chap56_mj.html#X7EB6803C789E027D"><span class="RefLink">Reference: StandardAssociateUnit</span></a>) for <code class="func">ZmodnZ</code> (<a href="../../doc/ref/chap14_mj.html#X79CE76AD82B3E2B2"><span class="RefLink">Reference: ZmodnZ</span></a>), clarify documentation for <code class="func">IsEuclideanRing</code> (<a href="../../doc/ref/chap56_mj.html#X808B8E8E80D48E4A"><span class="RefLink">Reference: IsEuclideanRing</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1990">#1990</a></span>)</p>
+
+</li>
+<li><p>Improve documentation and interface for floats (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2016">#2016</a></span>)</p>
+
+</li>
+<li><p>Add <code class="func">PositionsProperty</code> (<a href="../../doc/ref/chap21_mj.html#X7DA94D278304EC3D"><span class="RefLink">Reference: PositionsProperty</span></a>) method for non-dense lists (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2021">#2021</a></span>)</p>
+
+</li>
+<li><p>Add <code class="code">TrivialGroup(IsFpGroup)</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2037">#2037</a></span>)</p>
+
+</li>
+<li><p>Change <code class="func">ObjectifyWithAttributes</code> (<a href="../../doc/ref/chap79_mj.html#X85377AC07E775066"><span class="RefLink">Reference: ObjectifyWithAttributes</span></a>) to return the new objects (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2098">#2098</a></span>)</p>
+
+</li>
+<li><p>Removed a never released undocumented <strong class="pkg">HPC-GAP</strong> syntax extension which allowed to use a backtick/backquote as alias for <code class="func">MakeImmutable</code> (<a href="../../doc/ref/chap12_mj.html#X80CE136D804097C7"><span class="RefLink">Reference: MakeImmutable</span></a>). (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2202">#2202</a></span>).</p>
+
+</li>
+<li><p>Various changes (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2253">#2253</a></span>):</p>
+
+
+<ul>
+<li><p>Improve performance and memory usage of <code class="code">ImageKernelBlocksHomomorphism"</code></p>
+
+</li>
+<li><p>Document <code class="func">LowIndexSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X85DAFB7582A88463"><span class="RefLink">Reference: LowIndexSubgroups</span></a>)</p>
+
+</li>
+<li><p>Correct <code class="func">ClassesSolvableGroup</code> (<a href="../../doc/ref/chap45_mj.html#X79593F667A68A21D"><span class="RefLink">Reference: ClassesSolvableGroup</span></a>) documentation to clarify that it requires, but does not test membership</p>
+
+</li>
+<li><p>fix <code class="func">IsNaturalGL</code> (<a href="../../doc/ref/chap44_mj.html#X86F9A27D7AFAEB5A"><span class="RefLink">Reference: IsNaturalGL</span></a>) for trivial matrix groups with empty generating set</p>
+
+</li>
+</ul>
+</li>
+<li><p>Make it possible to interrupt <code class="code">repeat continue; until false;</code> and similar tight loops with "Ctrl-C" (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2259">#2259</a></span>).</p>
+
+</li>
+<li><p>Improved <strong class="pkg">GAP</strong> testing infrastructure, extended <strong class="pkg">GAP</strong> test suite, and increased code coverage</p>
+
+</li>
+<li><p>Countless other tweaks, improvements, fixes were applied to the <strong class="pkg">GAP</strong> library, kernel and manual</p>
+
+</li>
+</ul>
+<p>Fixed bugs:</p>
+
+
+<ul>
+<li><p>Fix bugs in <code class="func">NormalSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X80237A847E24E6CF"><span class="RefLink">Reference: NormalSubgroups</span></a>) and <code class="func">PrintCSV</code> (<a href="../../doc/ref/chap10_mj.html#X8779DAC585E05A47"><span class="RefLink">Reference: PrintCSV</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/433">#433</a></span>)</p>
+
+</li>
+<li><p>Fix nice monomorphism dispatch for <code class="func">HallSubgroup</code> (<a href="../../doc/ref/chap39_mj.html#X7EDBA19E828CD584"><span class="RefLink">Reference: HallSubgroup</span></a>) (e.g. fixes <code class="code">HallSubgroup(GL(3,4), [2,3])</code>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/559">#559</a></span>)</p>
+
+</li>
+<li><p>Check for permutations whose degree would exceed the internal limit, and document that limit (<span class="URL"><a href="https://github.com/gap-system/gap/pull/581">#581</a></span>)</p>
+
+</li>
+<li><p>Fix segfault after quitting from the break loop in certain cases (<span class="URL"><a href="https://github.com/gap-system/gap/pull/709">#709</a></span> which fixes <span class="URL"><a href="https://github.com/gap-system/gap/issues/397">#397</a></span>)</p>
+
+</li>
+<li><p>Fix rankings for <code class="func">Socle</code> (<a href="../../doc/ref/chap39_mj.html#X81F647FA83D8854F"><span class="RefLink">Reference: Socle</span></a>) and <code class="func">MinimalNormalSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X86FDD9BA819F5644"><span class="RefLink">Reference: MinimalNormalSubgroups</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/711">#711</a></span>)</p>
+
+</li>
+<li><p>Make key and attribute values immutable (<span class="URL"><a href="https://github.com/gap-system/gap/pull/714">#714</a></span>)</p>
+
+</li>
+<li><p>Make <code class="code">OnTuples([-1], (1,2))</code> return an error (<span class="URL"><a href="https://github.com/gap-system/gap/pull/718">#718</a></span>)</p>
+
+</li>
+<li><p>Fix bug in <code class="func">NewmanInfinityCriterion</code> (<a href="../../doc/ref/chap47_mj.html#X85C9FD548394C1E2"><span class="RefLink">Reference: NewmanInfinityCriterion</span></a>) which could corrupt the <code class="func">PCentralSeries</code> (<a href="../../doc/ref/chap39_mj.html#X7809B7ED792669F3"><span class="RefLink">Reference: PCentralSeries</span></a>) attribute (<span class="URL"><a href="https://github.com/gap-system/gap/pull/719">#719</a></span>)</p>
+
+</li>
+<li><p>The length of the list returned by <code class="code">OnSetsPerm</code> is now properly set (<span class="URL"><a href="https://github.com/gap-system/gap/pull/731">#731</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">Remove</code> (<a href="../../doc/ref/chap21_mj.html#X7E98B11B79BA9167"><span class="RefLink">Reference: Remove</span></a>) misbehaving when last member of list with gaps in it is removed (<span class="URL"><a href="https://github.com/gap-system/gap/pull/766">#766</a></span>)</p>
+
+</li>
+<li><p>Fix bugs in various methods for Rees (0-)matrix semigroups: <code class="func">IsFinite</code> (<a href="../../doc/ref/chap30_mj.html#X808A4061809A6E67"><span class="RefLink">Reference: IsFinite</span></a>), <code class="func">IsOne</code> (<a href="../../doc/ref/chap31_mj.html#X814D78347858EC13"><span class="RefLink">Reference: IsOne</span></a>), <code class="func">Enumerator</code> (<a href="../../doc/ref/chap30_mj.html#X7EF8910F82B45EC7"><span class="RefLink">Reference: Enumerator</span></a>), <code class="func">IsReesMatrixSemigroup</code> (<a href="../../doc/ref/chap51_mj.html#X780BB78A79275244"><span class="RefLink">Reference: IsReesMatrixSemigroup</span></a>) and <code class="func">IsReesZeroMatrixSemigroup</code> (<a href="../../doc/ref/chap51_mj.html#X780BB78A79275244"><span class="RefLink">Reference: IsReesZeroMatrixSemigroup</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/768">#768</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1676">#1676</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">IsFullTransformationSemigroup</code> (<a href="../../doc/ref/chap53_mj.html#X85C58E1E818C838C"><span class="RefLink">Reference: IsFullTransformationSemigroup</span></a>) to work correctly for the full transformation semigroup of degree 0 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/769">#769</a></span>)</p>
+
+</li>
+<li><p>Fix printing very large (&gt; 2^28 points) permutations (<span class="URL"><a href="https://github.com/gap-system/gap/pull/782">#782</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="code">Intersection([])</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/854">#854</a></span>)</p>
+
+</li>
+<li><p>Fix crash in <code class="code">IsKernelFunction</code> for some inputs (<span class="URL"><a href="https://github.com/gap-system/gap/pull/876">#876</a></span>)</p>
+
+</li>
+<li><p>Fix bug in <code class="func">ShortestVectors</code> (<a href="../../doc/ref/chap25_mj.html#X79A692B6819353D4"><span class="RefLink">Reference: ShortestVectors</span></a>) which could cause <code class="func">OrthogonalEmbeddings</code> (<a href="../../doc/ref/chap25_mj.html#X842280C2808FF05D"><span class="RefLink">Reference: OrthogonalEmbeddings</span></a>) to enter a break loop (<span class="URL"><a href="https://github.com/gap-system/gap/pull/941">#941</a></span>)</p>
+
+</li>
+<li><p>Fix crash in some methods involving partial perms (<span class="URL"><a href="https://github.com/gap-system/gap/pull/948">#948</a></span>)</p>
+
+</li>
+<li><p><code class="code">FreeMonoid(0)</code> no longer satisfies <code class="func">IsGroup</code> (<a href="../../doc/ref/chap39_mj.html#X7939B3177BBD61E4"><span class="RefLink">Reference: IsGroup</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/950">#950</a></span>)</p>
+
+</li>
+<li><p>Fix crash when invoking weak pointer functions on invalid arguments (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1009">#1009</a></span>)</p>
+
+</li>
+<li><p>Fix a bug parsing character constants (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1015">#1015</a></span>)</p>
+
+</li>
+<li><p>Fix several bugs and crashes in <code class="code">Z(p,d)</code> for invalid arguments, e.g. <code class="code">Z(4,5)</code>, <code class="code">Z(6,3)</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1029">#1029</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1059">#1059</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1383">#1383</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1573">#1573</a></span>)</p>
+
+</li>
+<li><p>Fix starting <strong class="pkg">GAP</strong> on systems with large inodes (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1033">#1033</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">NrFixedPoints</code> (<a href="../../doc/ref/chap54_mj.html#X7FAF969C84CDC742"><span class="RefLink">Reference: NrFixedPoints for a partial perm</span></a>) and <code class="func">FixedPointsOfPartialPerm</code> (<a href="../../doc/ref/chap54_mj.html#X82AAFF938623422E"><span class="RefLink">Reference: FixedPointsOfPartialPerm for a partial perm</span></a>) for a partial perm and a partial perm semigroup (they used to return the moved points rather than the fixed points) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1034">#1034</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">MeetOfPartialPerms</code> (<a href="../../doc/ref/chap54_mj.html#X81E2B6977E28CD00"><span class="RefLink">Reference: MeetOfPartialPerms</span></a>) when given a collection of 1 or 0 partial perms (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1035">#1035</a></span>)</p>
+
+</li>
+<li><p>The behaviour of <code class="func">AsPartialPerm</code> (<a href="../../doc/ref/chap54_mj.html#X87EC67747B260E98"><span class="RefLink">Reference: AsPartialPerm for a transformation and a set of positive integer</span></a>) for a transformation and a list is corrected (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1036">#1036</a></span>)</p>
+
+</li>
+<li><p><code class="func">IsomorphismReesZeroMatrixSemigroup</code> (<a href="../../doc/ref/chap51_mj.html#X7964B5C97FB9C07D"><span class="RefLink">Reference: IsomorphismReesZeroMatrixSemigroup</span></a>) for a 0-simple semigroup is now defined on the zero of the source and range semigroups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1038">#1038</a></span>)</p>
+
+</li>
+<li><p>Fix isomorphisms from finitely-presented monoids to finitely-presented semigroups, and allow isomorphisms from semigroups to fp-monoids (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1039">#1039</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">One</code> (<a href="../../doc/ref/chap31_mj.html#X8046262384895B2A"><span class="RefLink">Reference: One</span></a>) for a partial permutation semigroup without generators (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1040">#1040</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">MemoryUsage</code> (<a href="../../doc/ref/chap12_mj.html#X7F4D216B7DF7BE9D"><span class="RefLink">Reference: MemoryUsage</span></a>) for positional and component objects (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1044">#1044</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="code">PlainString</code> causing immutable strings to become mutable (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1096">#1096</a></span>)</p>
+
+</li>
+<li><p>Restore support for sparc64 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1124">#1124</a></span>)</p>
+
+</li>
+<li><p>Fix a problem with `&lt;` for transformations, which could give incorrect results (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1130">#1130</a></span>)</p>
+
+</li>
+<li><p>Fix crash when comparing recursive data structures such as <code class="code">[~] = [~]</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1151">#1151</a></span>)</p>
+
+</li>
+<li><p>Ensure output of <code class="code">TrivialGroup(IsPermGroup)</code> has zero generators (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1247">#1247</a></span>)</p>
+
+</li>
+<li><p>Fix for applying the <code class="func">InverseGeneralMapping</code> (<a href="../../doc/ref/chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">Reference: InverseGeneralMapping</span></a>) of an <code class="func">IsomorphismFpSemigroup</code> (<a href="../../doc/ref/chap52_mj.html#X869F966B8196F28C"><span class="RefLink">Reference: IsomorphismFpSemigroup</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1259">#1259</a></span>)</p>
+
+</li>
+<li><p>Collection of improvements and fixes: (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1294">#1294</a></span>)</p>
+
+
+<ul>
+<li><p>A fix for quotient rings of rings by structure constants</p>
+
+</li>
+<li><p>Generic routine for transformation matrix to rational canonical form</p>
+
+</li>
+<li><p>Speed improvements to block homomorphisms</p>
+
+</li>
+<li><p>New routines for conjugates or subgroups with desired containment</p>
+
+</li>
+<li><p>Performance improvement for conjugacy classes in groups with a huge number of classes, giving significant improvements to <code class="func">IntermediateSubgroups</code> (<a href="../../doc/ref/chap39_mj.html#X781661FB78DC83B5"><span class="RefLink">Reference: IntermediateSubgroups</span></a>) (e.g. 7-Sylow subgroup in <span class="SimpleMath">\(PSL(7,2)\)</span>), ascending chain and thus in turn double coset calculations and further routines that rely on it</p>
+
+</li>
+</ul>
+</li>
+<li><p>Fix <code class="func">EqFloat</code> (<a href="../../doc/ref/chap19_mj.html#X7BD96E0585D5A1EE"><span class="RefLink">Reference: EqFloat</span></a>) to return correct results, instead of always returning <code class="keyw">false</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1370">#1370</a></span>)</p>
+
+</li>
+<li><p>Various changes, including fixes for <code class="func">CallFuncList</code> (<a href="../../doc/ref/chap5_mj.html#X7CF4DDB97D65AE52"><span class="RefLink">Reference: CallFuncList</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1417">#1417</a></span>)</p>
+
+</li>
+<li><p>Better define the result of <code class="func">MappingPermListList</code> (<a href="../../doc/ref/chap42_mj.html#X8087DCC780B9656A"><span class="RefLink">Reference: MappingPermListList</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1432">#1432</a></span>)</p>
+
+</li>
+<li><p>Check the arguments to <code class="func">IsInjectiveListTrans</code> (<a href="../../doc/ref/chap53_mj.html#X8275DFAA8270BB59"><span class="RefLink">Reference: IsInjectiveListTrans</span></a>) to prevent crashes (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1435">#1435</a></span>)</p>
+
+</li>
+<li><p>Change <code class="func">BlownUpMat</code> (<a href="../../doc/ref/chap24_mj.html#X85923C107A4569D0"><span class="RefLink">Reference: BlownUpMat</span></a>) to return fail for certain invalid inputs (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1488">#1488</a></span>)</p>
+
+</li>
+<li><p>Fixes for creating Green's classes of semigroups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1492">#1492</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1771">#1771</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="code">DoImmutableMatrix</code> for finite fields (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1504">#1504</a></span>)</p>
+
+</li>
+<li><p>Make structural copy handle boolean lists properly (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1514">#1514</a></span>)</p>
+
+</li>
+<li><p>Minimal fix for algebraic extensions over finite fields of order &gt; 256 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1569">#1569</a></span>)</p>
+
+</li>
+<li><p>Fix for computing quotients of certain algebra modules (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1669">#1669</a></span>)</p>
+
+</li>
+<li><p>Fix an error in the default method for <code class="func">PositionNot</code> (<a href="../../doc/ref/chap21_mj.html#X865EF45D87ED1384"><span class="RefLink">Reference: PositionNot</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1672">#1672</a></span>)</p>
+
+</li>
+<li><p>Improvements to Rees matrix semigroups code and new tests (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1676">#1676</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">CodePcGroup</code> (<a href="../../doc/ref/chap46_mj.html#X8041C2D88721EEA9"><span class="RefLink">Reference: CodePcGroup</span></a>) for the trivial polycyclic group (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1679">#1679</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="code">FroidurePinExtendedAlg</code> for partial permutation monoids (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1697">#1697</a></span>)</p>
+
+</li>
+<li><p>Fix computing the radical of a zero dimensional associative algebra (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1701">#1701</a></span>)</p>
+
+</li>
+<li><p>Fix a bug in <code class="func">RadicalOfAlgebra</code> (<a href="../../doc/ref/chap62_mj.html#X850C29907A509533"><span class="RefLink">Reference: RadicalOfAlgebra</span></a>) which could cause a break loop for some associative algebras (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1716">#1716</a></span>)</p>
+
+</li>
+<li><p>Fix a recursion depth trap error when repeatedly calling <code class="func">Test</code> (<a href="../../doc/ref/chap7_mj.html#X87712F9D8732193C"><span class="RefLink">Reference: Test</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1753">#1753</a></span>)</p>
+
+</li>
+<li><p>Fix bugs in <code class="func">PrimePGroup</code> (<a href="../../doc/ref/chap39_mj.html#X87356BAA7E9E2142"><span class="RefLink">Reference: PrimePGroup</span></a>) for direct products of <span class="SimpleMath">\(p\)</span>-groups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1754">#1754</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">UpEnv</code> (<a href="../../doc/ref/chap6_mj.html#X79E66DA2875303B0"><span class="RefLink">Reference: UpEnv</span></a>) (available in break loops) when at the bottom of the backtrace (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1780">#1780</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">IsomorphismPartialPermSemigroup</code> (<a href="../../doc/ref/chap54_mj.html#X7FE18EBE79B9C17C"><span class="RefLink">Reference: IsomorphismPartialPermSemigroup</span></a>) and <code class="func">IsomorphismPartialPermMonoid</code> (<a href="../../doc/ref/chap54_mj.html#X7FE18EBE79B9C17C"><span class="RefLink">Reference: IsomorphismPartialPermMonoid</span></a>) for permutation groups with 0 generators (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1784">#1784</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">DisplaySemigroup</code> (<a href="../../doc/ref/chap51_mj.html#X81AF2EAB7CEF8C19"><span class="RefLink">Reference: DisplaySemigroup</span></a>) for transformation semigroups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1785">#1785</a></span>)</p>
+
+</li>
+<li><p>Fix "no method found" errors in <code class="func">MagmaWithOne</code> (<a href="../../doc/ref/chap35_mj.html#X7854B23286B17321"><span class="RefLink">Reference: MagmaWithOne</span></a>) and <code class="func">MagmaWithInverses</code> (<a href="../../doc/ref/chap35_mj.html#X7A2B51F67EF4DA28"><span class="RefLink">Reference: MagmaWithInverses</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1798">#1798</a></span>)</p>
+
+</li>
+<li><p>Fix an error computing kernel of group homomorphism from fp group into permutation group (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1809">#1809</a></span>)</p>
+
+</li>
+<li><p>Fix an error in MTC losing components when copying a new augmented coset table (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1809">#1809</a></span>)</p>
+
+</li>
+<li><p>Fix output of <code class="func">Where</code> (<a href="../../doc/ref/chap6_mj.html#X7A7FFA2B7C1EF5A3"><span class="RefLink">Reference: Where</span></a>) in a break loop, which pointed at the wrong code line in some cases (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1814">#1814</a></span>)</p>
+
+</li>
+<li><p>Fix the interaction of signals in <strong class="pkg">GAP</strong> and the <strong class="pkg">IO</strong> package (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1851">#1851</a></span>)</p>
+
+</li>
+<li><p>Make line editing resilient to <code class="code">LineEditKeyHandler</code> failure (in particular, don't crash) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1856">#1856</a></span>)</p>
+
+</li>
+<li><p>Omit non-characters from <code class="func">PermChars</code> (<a href="../../doc/ref/chap72_mj.html#X7D02541482C196A6"><span class="RefLink">Reference: PermChars</span></a>) results (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1867">#1867</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">ExteriorPower</code> (<a href="../../doc/ref/chap64_mj.html#X7F4AB6A1863E8FB2"><span class="RefLink">Reference: ExteriorPowerOfAlgebraModule</span></a>) when exterior power is 0-dimensional (used to return a 1-dimensional result) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1872">#1872</a></span>)</p>
+
+</li>
+<li><p>Fix recursion depth trap and other improvements for quotients of fp groups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1884">#1884</a></span>)</p>
+
+</li>
+<li><p>Fix a bug in the computation of a permutation group isomorphic to a group of automorphisms (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1907">#1907</a></span>)</p>
+
+</li>
+<li><p>Fix bug in <code class="func">InstallFlushableValueFromFunction</code> (<a href="../../doc/ref/chap79_mj.html#X7A23F09886E936D2"><span class="RefLink">Reference: InstallFlushableValueFromFunction</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1920">#1920</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">ONanScottType</code> (<a href="../../doc/ref/chap43_mj.html#X7E50211A7B92455F"><span class="RefLink">Reference: ONanScottType</span></a>) and introduce <code class="func">RestrictedInverseGeneralMapping</code> (<a href="../../doc/ref/chap32_mj.html#X7BD2D5A87CD6B213"><span class="RefLink">Reference: RestrictedInverseGeneralMapping</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1937">#1937</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">QuotientMod</code> (<a href="../../doc/ref/chap56_mj.html#X8555913A83D716A4"><span class="RefLink">Reference: QuotientMod</span></a>) documentation, and the integer implementation. This partially reverts changes made in version 4.7.8 in 2013. The documentation is now correct (resp. consistent again), and several corner cases, e.g. <code class="code">QuotientMod(0,0,m)</code> now work correctly (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1991">#1991</a></span>)</p>
+
+</li>
+<li><p>Fix <code class="func">PositionProperty</code> (<a href="../../doc/ref/chap21_mj.html#X7E6C763A82C6153B"><span class="RefLink">Reference: PositionProperty</span></a>) with <var class="Arg">from</var> &lt; 1 (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2056">#2056</a></span>)</p>
+
+</li>
+<li><p>Fix inefficiency when dealing with certain algebra modules (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2058">#2058</a></span>)</p>
+
+</li>
+<li><p>Restrict capacity of plain lists to <span class="SimpleMath">\(2^28\)</span> in 32-bit and <span class="SimpleMath">\(2^60\)</span> in 64-bit builds (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2064">#2064</a></span>)</p>
+
+</li>
+<li><p>Fix crashes with very large heaps (&gt; 2 GB) on 32 bit systems, and work around a bug in <code class="code">memmove</code> in 32-bit glibc versions which could corrupt memory (affects most current Linux distributions) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2166">#2166</a></span>).</p>
+
+</li>
+<li><p>Fix name of the <code class="code">reversed</code> option in documentation of <code class="func">LoadAllPackages</code> (<a href="../../doc/ref/chap76_mj.html#X80A0D21D78CF8494"><span class="RefLink">Reference: LoadAllPackages</span></a>) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2167">#2167</a></span>).</p>
+
+</li>
+<li><p>Fix <code class="code">TriangulizedMat([])</code> (see <code class="func">TriangulizedMat</code> (<a href="../../doc/ref/chap24_mj.html#X7BA26C3387AB434E"><span class="RefLink">Reference: TriangulizedMat</span></a>) to return an empty list instead of producing an error (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2260">#2260</a></span>).</p>
+
+</li>
+<li><p>Fix several potential (albeit rare) crashes related to garbage collection (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2321">#2321</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2313">#2313</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/2320">#2320</a></span>).</p>
+
+</li>
+</ul>
+<p>Removed or obsolete functionality:</p>
+
+
+<ul>
+<li><p>Make <code class="code">SetUserPreferences</code> obsolete (use <code class="func">SetUserPreference</code> (<a href="../../doc/ref/chap3_mj.html#X7B0AD104839B6C3C"><span class="RefLink">Reference: SetUserPreference</span></a>) instead) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/512">#512</a></span>)</p>
+
+</li>
+<li><p>Remove undocumented <code class="code">NameIsomorphismClass</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/597">#597</a></span>)</p>
+
+</li>
+<li><p>Remove unused code for rational classes of permutation groups (<span class="URL"><a href="https://github.com/gap-system/gap/pull/886">#886</a></span>)</p>
+
+</li>
+<li><p>Remove unused and undocumented <code class="code">Randomizer</code> and <code class="code">CheapRandomizer</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1113">#1113</a></span>)</p>
+
+</li>
+<li><p>Remove <code class="file">install-tools.sh</code> script and documentation mentioning it (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1305">#1305</a></span>)</p>
+
+</li>
+<li><p>Withdraw <code class="code">CallWithTimeout</code> and <code class="code">CallWithTimeoutList</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1324">#1324</a></span>)</p>
+
+</li>
+<li><p>Make <code class="code">RecFields</code> obsolete (use <code class="func">RecNames</code> (<a href="../../doc/ref/chap29_mj.html#X837F1E1F866FB1A0"><span class="RefLink">Reference: RecNames</span></a>) instead) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1331">#1331</a></span>)</p>
+
+</li>
+<li><p>Remove undocumented <code class="code">SuPeRfail</code> and <code class="code">READ_COMMAND</code> (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1374">#1374</a></span>)</p>
+
+</li>
+<li><p>Remove unused <code class="file">oldmatint.gi</code> (old methods for functions that compute Hermite and Smith normal forms of integer matrices) (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1765">#1765</a></span>)</p>
+
+</li>
+<li><p>Make <code class="code">TRANSDEGREES</code> obsolete (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1852">#1852</a></span>)</p>
+
+</li>
+</ul>
+<p><a id="X7F52B77B7DBACC17" name="X7F52B77B7DBACC17"></a></p>
+
+<h5>3.1-2 <span class="Heading"><strong class="pkg">HPC-GAP</strong></span></h5>
+
+<p><strong class="pkg">GAP</strong> includes experimental code to support multithreaded programming in <strong class="pkg">GAP</strong>, dubbed <strong class="pkg">HPC-GAP</strong> (where HPC stands for "high performance computing"). <strong class="pkg">GAP</strong> and <strong class="pkg">HPC-GAP</strong> codebases diverged during the project, and we are currently working on unifying the codebases and incorporating the <strong class="pkg">HPC-GAP</strong> code back into the mainstream <strong class="pkg">GAP</strong> versions.</p>
+
+<p>This is work in progress, and <strong class="pkg">HPC-GAP</strong> as it is included with <strong class="pkg">GAP</strong> right now still suffers from various limitations and problems, which we are actively working on to resolve. However, including it with <strong class="pkg">GAP</strong> (disabled by default) considerably simplifies development of <strong class="pkg">HPC-GAP</strong>. It also means that you can very easily get a (rough!) sneak peak of <strong class="pkg">HPC-GAP</strong>. It comes together with the new manual book called "<strong class="pkg">HPC-GAP</strong> Reference Manual" and located in the `doc/hpc` directory.</p>
+
+<p>Users interested in experimenting with shared memory parallel programming in <strong class="pkg">GAP</strong> can build <strong class="pkg">HPC-GAP</strong> by following the instructions from <span class="URL"><a href="https://github.com/gap-system/gap/wiki/Building-HPC-GAP">https://github.com/gap-system/gap/wiki/Building-HPC-GAP</a></span>. While it is possible to build <strong class="pkg">HPC-GAP</strong> from a release version of <strong class="pkg">GAP</strong> you downloaded from the <strong class="pkg">GAP</strong> website, due to the ongoing development of <strong class="pkg">HPC-GAP</strong>, we recommend that you instead build <strong class="pkg">HPC-GAP</strong> from the latest development version available in the <strong class="pkg">GAP</strong> repository at GitHub, i.e. <span class="URL"><a href="https://github.com/gap-system/gap">https://github.com/gap-system/gap</a></span>.</p>
+
+<p><a id="X875343D47A7B5E62" name="X875343D47A7B5E62"></a></p>
+
+<h5>3.1-3 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.8.10</span></h5>
+
+<p>There were 132 packages redistributed together with <strong class="pkg">GAP</strong> 4.8.10. The <strong class="pkg">GAP</strong> 4.9.1 distribution includes 134 packages, including numerous updates of previously redistributed packages, and some major changes outlined below.</p>
+
+<p>The libraries of small, primitive and transitive groups which previously were an integral part of <strong class="pkg">GAP</strong> were split into three separate packages <span class="URL"><a href="http://gap-packages.github.io/primgrp/">PrimgGrp</a></span>, <span class="URL"><a href="https://gap-packages.github.io/smallgrp/">SmallGrp</a></span> and <span class="URL"><a href="http://www.math.colostate.edu/~hulpke/transgrp/">TransGrp</a></span>:</p>
+
+
+<ul>
+<li><p>The <strong class="pkg">PrimGrp</strong> package by Alexander Hulpke, Colva M. Roney-Dougal and Christopher Russell provides the library of primitive permutation groups which includes, up to permutation isomorphism (i.e., up to conjugacy in the corresponding symmetric group), all primitive permutation groups of degree &lt; 4096.</p>
+
+</li>
+<li><p>The <strong class="pkg">SmallGrp</strong> package by Bettina Eick, Hans Ulrich Besche and Eamonn O’Brien provides the library of groups of certain "small" orders. The groups are sorted by their orders and they are listed up to isomorphism; that is, for each of the available orders a complete and irredundant list of isomorphism type representatives of groups is given.</p>
+
+</li>
+<li><p>The <strong class="pkg">TransGrp</strong> package by Alexander Hulpke provides the library of transitive groups, with an optional download of the library of transitive groups of degree 32.</p>
+
+</li>
+</ul>
+<p>For backwards compatibility, these are required packages in <strong class="pkg">GAP</strong> 4.9 (i.e., <strong class="pkg">GAP</strong> will not start without them). We plan to change this for <strong class="pkg">GAP</strong> 4.10 (see <span class="URL"><a href="https://github.com/gap-system/gap/pull/2434">#2434</a></span>), once all packages which currently implicitly rely on these new packages had time to add explicit dependencies on them (<span class="URL"><a href="https://github.com/gap-system/gap/pull/1650">#1650</a></span>, <span class="URL"><a href="https://github.com/gap-system/gap/pull/1714">#1714</a></span>).</p>
+
+<p>The new <strong class="pkg">ZeroMQInterface</strong> package by Markus Pfeiffer and Reimer Behrends has been added for the redistribution. It provides both low-level bindings as well as some higher level interfaces for the <span class="URL"><a href="http://zeromq.org/">ZeroMQ</a></span> message passing library for <strong class="pkg">GAP</strong> and <strong class="pkg">HPC-GAP</strong> enabling lightweight distributed computation.</p>
+
+<p>The <strong class="pkg">HAPprime</strong> package by Paul Smith is no longer redistributed with <strong class="pkg">GAP</strong>. Part of the code has been incorporated into the <strong class="pkg">HAP</strong> package. Its source code repository, containing the code of the last distributed version, can still be found at <span class="URL"><a href="https://github.com/gap-packages/happrime">https://github.com/gap-packages/happrime</a></span>.</p>
+
+<p>Also, the <strong class="pkg">ParGAP</strong> package by Gene Cooperman is no longer redistributed with <strong class="pkg">GAP</strong> because it no longer can be compiled with <strong class="pkg">GAP</strong> 4.9 (see <span class="URL"><a href="https://mail.gap-system.org/pipermail/gap/2018-March/001082.html">this announcement</a></span>). Its source code repository, containing the code of the last distributed version, plus some first fixes needed for compatibility for GAP 4.9, can still be found at <span class="URL"><a href="https://github.com/gap-packages/pargap">https://github.com/gap-packages/pargap</a></span>. If somebody is interested in repairing this package and taking over its maintenance, so that it can be distributed again, please contact the <strong class="pkg">GAP</strong> team.</p>
+
+<p><a id="X788623D37D59433D" name="X788623D37D59433D"></a></p>
+
+<h4>3.2 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.2 (July 2018)</span></h4>
+
+<p><a id="X80F675A48712F934" name="X80F675A48712F934"></a></p>
+
+<h5>3.2-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9.2</span></h5>
+
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p>Fixed a bug in iterating over an empty cartesian product (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2421">#2421</a></span>). [Reported by @isadofschi]</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to crashes:</p>
+
+
+<ul>
+<li><p>Fixed a crash after entering <code class="code">return;</code> in a "method not found" break loop (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2449">#2449</a></span>).</p>
+
+</li>
+<li><p>Fixed a crash when an error occurs and <code class="func">OutputLogTo</code> (<a href="../../doc/ref/chap10_mj.html#X834A6DD17B0E2062"><span class="RefLink">Reference: OutputLogTo for streams</span></a>) points to a stream which internally uses another stream (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2596">#2596</a></span>).</p>
+
+</li>
+</ul>
+<p>Fixed bugs that could lead to incorrect results:</p>
+
+
+<ul>
+<li><p>Fixed a bug in computing maximal subgroups, which broke some other calculations, in particular, computing intermediate subgroups. (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2488">#2488</a></span>). [Reported by Seyed Hassan Alavi]</p>
+
+</li>
+</ul>
+<p>Other fixed bugs and further improvements:</p>
+
+
+<ul>
+<li><p>Profiling now correctly handles calls to <code class="code">longjmp</code> and allows to generate profiles using version 2.0.1 of the <strong class="pkg">Profiling</strong> package (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2444">#2444</a></span>).</p>
+
+</li>
+<li><p>The <code class="file">bin/gap.sh</code> script now respects the <code class="code">GAP_DIR</code> environment variable (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2465">#2465</a></span>). [Contributed by RussWoodroofe]</p>
+
+</li>
+<li><p>The <code class="file">bin/BuildPackages.sh</code> script now properly builds binaries for the <strong class="pkg">simpcomp</strong> package (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2475">#2475</a></span>).</p>
+
+</li>
+<li><p>Fixed a bug in restoring a workspace, which prevented <strong class="pkg">GAP</strong> from saving the history if a workspace was loaded during startup (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2578">#2578</a></span>).</p>
+
+</li>
+</ul>
+<p><a id="X85F5CB9C80D89E10" name="X85F5CB9C80D89E10"></a></p>
+
+<h5>3.2-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.9.1</span></h5>
+
+<p>This release contains updated versions of 22 packages from <strong class="pkg">GAP</strong> 4.9.1 distribution. Additionally, it has three new packages. The new <strong class="pkg">JupyterKernel</strong> package by Markus Pfeiffer provides a so-called <em>kernel</em> for the Jupyter interactive document system (<span class="URL"><a href="https://jupyter.org/">https://jupyter.org/</a></span>). This package requires Jupyter to be installed on your system (see <span class="URL"><a href="https://jupyter.org/install">https://jupyter.org/install</a></span> for instructions). It also requires <strong class="pkg">GAP</strong> packages <strong class="pkg">IO</strong>, <strong class="pkg">ZeroMQInterface</strong>, <strong class="pkg">json</strong>, and also two new packages by Markus Pfeiffer called <strong class="pkg">crypting</strong> and <strong class="pkg">uuid</strong>, all included into <strong class="pkg">GAP</strong> 4.9.2 distribution. The <strong class="pkg">JupyterKernel</strong> package is not yet usable on Windows.</p>
+
+<p><a id="X7DCF1B2984AEB7F0" name="X7DCF1B2984AEB7F0"></a></p>
+
+<h4>3.3 <span class="Heading"><strong class="pkg">GAP</strong> 4.9.3 (September 2018)</span></h4>
+
+<p><a id="X878606AD8708A3AF" name="X878606AD8708A3AF"></a></p>
+
+<h5>3.3-1 <span class="Heading">Changes in the core <strong class="pkg">GAP</strong> system introduced in <strong class="pkg">GAP</strong> 4.9.3</span></h5>
+
+<p>Fixed bugs that could lead to break loops:</p>
+
+
+<ul>
+<li><p>Fixed a regression in <code class="func">HighestWeightModule</code> (<a href="../../doc/ref/chap64_mj.html#X7FB14F7F80EFF33F"><span class="RefLink">Reference: HighestWeightModule</span></a>) caused by changes in sort functions introduced in <strong class="pkg">GAP</strong> 4.9 release (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2617">#2617</a></span>).</p>
+
+</li>
+</ul>
+<p>Other fixed bugs and further improvements:</p>
+
+
+<ul>
+<li><p>Fixed a compile time assertion that caused compiler error on some systems (<span class="URL"><a href="https://github.com/gap-system/gap/pull/2691">#2691</a></span>).</p>
+
+</li>
+</ul>
+<p><a id="X7C655E8782735518" name="X7C655E8782735518"></a></p>
+
+<h5>3.3-2 <span class="Heading">New and updated packages since <strong class="pkg">GAP</strong> 4.9.2</span></h5>
+
+<p>This release contains updated versions of 18 packages from <strong class="pkg">GAP</strong> 4.9.2 distribution. Additionally, it has three new packages:</p>
+
+
+<ul>
+<li><p>The <strong class="pkg">curlInterface</strong> package by Christopher Jefferson and Michael Torpey, which provides a simple wrapper around <strong class="pkg">libcurl</strong> library (<span class="URL"><a href="https://curl.haxx.se/">https://curl.haxx.se/</a></span>) to allow downloading files over http, ftp and https protocols.</p>
+
+</li>
+<li><p>The <strong class="pkg">datastructures</strong> package by Markus Pfeiffer, Max Horn, Christopher Jefferson and Steve Linton, which aims at providing standard datastructures, consolidating existing code and improving on it, in particular in view of <strong class="pkg">HPC-GAP</strong>.</p>
+
+</li>
+<li><p>The <strong class="pkg">DeepThought</strong> package by Nina Wagner and Max Horn, which provides functionality for computations in finitely generated nilpotent groups given by a suitable presentation using Deep Thought polynomials.</p>
+
+</li>
+</ul>
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>
