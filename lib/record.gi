@@ -41,7 +41,7 @@ InstallMethod( PrintObj,
 ## the former (now removed) kernel function FuncPRINT_PREC_DEFAULT.
     function( record )
     local com, i, snam, nam, names, order;
-    Print("\>\>rec(\n\>\>");
+    Print("\>\>\>\>rec(\n");
     com := false;
 
     names := List(RecNames(record));
@@ -51,22 +51,22 @@ InstallMethod( PrintObj,
     for i in [1..Length(names)] do
         nam := names[i];
         if com then
-            Print("\<\<,\n\>\>");
+            Print(",\n");
         else
             com := true;
         fi;
         SET_PRINT_OBJ_INDEX(order[i]);
         # easy if nam is integer or valid identifier:
         if ForAll(nam, x-> x in IdentifierLetters) and Size(nam) > 0 then
-          Print(nam, "\< := \>");
+          Print(nam, " := ");
         else 
           # otherwise we use (...) syntax:
           snam := String(nam);
-          Print("("); View(snam); Print(")\< := \>");
+          Print("("); View(snam); Print(") := ");
         fi;
         PrintObj(record.(nam));
     od;
-    Print(" \<\<\<\<)");
+    Print(" \<\<\<\<\n)");
 end);
 
 #############################################################################

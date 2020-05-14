@@ -1237,7 +1237,7 @@ static void PrintIf(Stat stat)
     /* print the 'if' branch                                               */
     Pr("if%4> ", 0, 0);
     PrintExpr(READ_EXPR(stat, 0));
-    Pr("%2< then%2>\n", 0, 0);
+    Pr("%4<\nthen%4>\n", 0, 0);
     PrintStat(READ_STAT(stat, 1));
     Pr("%4<\n", 0, 0);
 
@@ -1502,9 +1502,9 @@ static void PrintReturnObj(Stat stat)
         Pr("TryNextMethod();", 0, 0);
     }
     else {
-        Pr("%2>return%< %>", 0, 0);
+        Pr("%4>return (\n", 0, 0);
         PrintExpr( expr );
-        Pr("%2<;", 0, 0);
+        Pr("%4<\n);", 0, 0);
     }
 }
 

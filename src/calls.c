@@ -1008,7 +1008,7 @@ static void PrintFunction(Obj func)
       Pr("%5>function%< ( %>", 0, 0);
 #else
     /* print 'function ('                                                  */
-    Pr("%5>function%< ( %>", 0, 0);
+    Pr("%2>function ( ", 0, 0);
 #endif
 
     /* print the arguments                                                 */
@@ -1024,10 +1024,10 @@ static void PrintFunction(Obj func)
             const Char * locks = CONST_CSTR_STRING(LCKS_FUNC(func));
             switch(locks[i-1]) {
             case LOCK_QUAL_READONLY:
-                Pr("%>readonly %<", 0, 0);
+                Pr("readonly ", 0, 0);
                 break;
             case LOCK_QUAL_READWRITE:
-                Pr("%>readwrite %<", 0, 0);
+                Pr("readwrite ", 0, 0);
                 break;
             }
         }
@@ -1040,9 +1040,9 @@ static void PrintFunction(Obj func)
             Pr("...", 0, 0);
         }
         if (i != narg)
-            Pr("%<, %>", 0, 0);
+            Pr(", ", 0, 0);
     }
-    Pr(" %<)\n", 0, 0);
+    Pr(" )\n", 0, 0);
 
     // print the body
     if (IsKernelFunction(func)) {
@@ -1052,25 +1052,30 @@ static void PrintFunction(Obj func)
         /* print the locals                                                */
         nloc = NLOC_FUNC(func);
         if ( nloc >= 1 ) {
-            Pr("%>local ", 0, 0);
+            Pr("local ", 0, 0);
             for ( i = 1; i <= nloc; i++ ) {
                 if ( NAMS_FUNC(func) != 0 )
                     Pr("%H", (Int)NAMI_FUNC(func, (Int)(narg + i)), 0);
                 else
                     Pr("<<loc-%d>>", (Int)i, 0);
                 if (i != nloc)
-                    Pr("%<, %>", 0, 0);
+                    Pr(", ", 0, 0);
             }
-            Pr("%<;\n", 0, 0);
+            Pr(";%2>\n", 0, 0);
         }
-
+        else {
+            Pr("%2>  ", 0, 0);
+        }
+        
         // print the code
         Obj oldLVars;
         oldLVars = SWITCH_TO_NEW_LVARS(func, narg, NLOC_FUNC(func));
         PrintStat( OFFSET_FIRST_STAT );
         SWITCH_TO_OLD_LVARS( oldLVars );
+
+        Pr("%2<", 0, 0);
     }
-    Pr("%4<\n", 0, 0);
+    Pr("%2<\n", 0, 0);
 
     /* print 'end'                                                         */
     Pr("end", 0, 0);

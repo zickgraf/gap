@@ -1649,21 +1649,21 @@ static void PrintListDefault(Obj list)
         return;
     }
 
-    Pr("%2>[ %2>", 0, 0);
+    Pr("%4>[\n", 0, 0);
     for (UInt i = 1; i <= LEN_LIST(list); i++) {
         elm = ELMV0_LIST(list, i);
         if ( elm != 0 ) {
             if (1 < i)
-                Pr("%<,%< %2>", 0, 0);
+                Pr(",\n", 0, 0);
             SetPrintObjIndex(i);
             PrintObj( elm );
         }
         else {
             if (1 < i)
-                Pr("%2<,%2>", 0, 0);
+                Pr(",\n", 0, 0);
         }
     }
-    Pr(" %4<]", 0, 0);
+    Pr(" %4<\n]", 0, 0);
 }
 
 static void PrintPathList(Obj list, Int indx)

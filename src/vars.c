@@ -201,11 +201,11 @@ static Obj EvalIsbLVar(Expr expr)
 */
 static void PrintAssLVar(Stat stat)
 {
-    Pr("%2>", 0, 0);
+    Pr("", 0, 0);
     Pr("%H", (Int)NAME_LVAR(READ_STAT(stat, 0)), 0);
-    Pr("%< %>:= ", 0, 0);
+    Pr(" := ", 0, 0);
     PrintExpr(READ_EXPR(stat, 1));
-    Pr("%2<;", 0, 0);
+    Pr(";", 0, 0);
 }
 
 static void PrintUnbLVar(Stat stat)
@@ -1055,22 +1055,22 @@ static void PrintAsssList(Stat stat)
 */
 static void PrintElmList(Expr expr)
 {
-    Pr("%2>", 0, 0);
+    Pr("", 0, 0);
     PrintExpr(READ_EXPR(expr, 0));
-    Pr("%<[", 0, 0);
+    Pr("[", 0, 0);
     PrintExpr(READ_EXPR(expr, 1));
-    Pr("%<]", 0, 0);
+    Pr("]", 0, 0);
 }
 
 static void PrintElmMat(Expr expr)
 {
-    Pr("%2>", 0, 0);
+    Pr("", 0, 0);
     PrintExpr(READ_EXPR(expr, 0));
-    Pr("%<[", 0, 0);
+    Pr("[", 0, 0);
     PrintExpr(READ_EXPR(expr, 1));
-    Pr("%<, %<", 0, 0);
+    Pr(", ", 0, 0);
     PrintExpr(READ_EXPR(expr, 2));
-    Pr("%<]", 0, 0);
+    Pr("]", 0, 0);
 }
 
 static void PrintElmListLevel(Expr expr)
@@ -1923,11 +1923,11 @@ static void PrintUnbComObjExpr(Stat stat)
 */
 static void PrintElmComObjName(Expr expr)
 {
-    Pr("%2>", 0, 0);
+    Pr("", 0, 0);
     PrintExpr(READ_EXPR(expr, 0));
-    Pr("%<!.", 0, 0);
+    Pr("!.", 0, 0);
     Pr("%H", (Int)NAME_RNAM(READ_EXPR(expr, 1)), 0);
-    Pr("%<", 0, 0);
+    Pr("", 0, 0);
 }
 
 static void PrintIsbComObjName(Expr expr)
@@ -1951,11 +1951,11 @@ static void PrintIsbComObjName(Expr expr)
 */
 static void PrintElmComObjExpr(Expr expr)
 {
-    Pr("%2>", 0, 0);
+    Pr("", 0, 0);
     PrintExpr(READ_EXPR(expr, 0));
-    Pr("%<!.(", 0, 0);
+    Pr("!.(", 0, 0);
     PrintExpr(READ_EXPR(expr, 1));
-    Pr(")%<", 0, 0);
+    Pr(")", 0, 0);
 }
 
 static void PrintIsbComObjExpr(Expr expr)
